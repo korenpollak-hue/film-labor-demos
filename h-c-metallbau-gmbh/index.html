@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H&C Metallbau GmbH — Metall. Präzise. Zuverlässig.</title>
+<meta name="description" content="H&C Metallbau GmbH – Stahlkonstruktionen, Schlosserei und Montage im Maschinenbau. Individuelle Fertigung, zuverlässige Qualität.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf9f7;
+    --surface: #ffffff;
+    --text: #171717;
+    --text-muted: #6b6b6b;
+    --text-light: #999;
+    --accent: oklch(0.50 0.10 240);
+    --accent-light: oklch(0.95 0.02 240);
+    --border: #e8e6e3;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 2px 8px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+    --shadow-lg: 0 4px 12px rgba(0,0,0,0.06), 0 8px 32px rgba(0,0,0,0.06);
+    --shadow-xl: 0 8px 24px rgba(0,0,0,0.08), 0 16px 48px rgba(0,0,0,0.06);
+    --radius: 16px;
+    --radius-lg: 24px;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* ═══════════════ NAV ═══════════════ */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 16px 24px;
+    transition: all 0.4s var(--ease);
+  }
+
+  .nav.scrolled {
+    background: rgba(250, 249, 247, 0.85);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  .nav-logo img {
+    height: 32px;
+    width: auto;
+    border-radius: 6px;
+  }
+
+  .nav-logo-text {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.25s var(--ease);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-cta {
+    background: var(--text);
+    color: var(--bg) !important;
+    padding: 10px 24px;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s var(--ease);
+  }
+
+  .nav-cta:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-cta:active { transform: scale(0.98); }
+
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+
+  .mobile-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    position: absolute;
+    left: 9px;
+    transition: all 0.35s var(--ease);
+    border-radius: 2px;
+  }
+
+  .mobile-toggle span:nth-child(1) { top: 13px; }
+  .mobile-toggle span:nth-child(2) { top: 19px; }
+  .mobile-toggle span:nth-child(3) { top: 25px; }
+
+  .mobile-toggle.active span:nth-child(1) { top: 19px; transform: rotate(45deg); }
+  .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+  .mobile-toggle.active span:nth-child(3) { top: 19px; transform: rotate(-45deg); }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(250, 249, 247, 0.97);
+    backdrop-filter: blur(24px);
+    z-index: 99;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .mobile-menu.active { display: flex; }
+
+  .mobile-menu a {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 0.5s var(--ease) forwards;
+  }
+
+  .mobile-menu a:nth-child(1) { animation-delay: 0.05s; }
+  .mobile-menu a:nth-child(2) { animation-delay: 0.1s; }
+  .mobile-menu a:nth-child(3) { animation-delay: 0.15s; }
+  .mobile-menu a:nth-child(4) { animation-delay: 0.2s; }
+  .mobile-menu a:nth-child(5) { animation-delay: 0.25s; }
+
+  /* ═══════════════ HERO ═══════════════ */
+  .hero {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -20%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(ellipse, var(--accent-light) 0%, transparent 70%);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 16px;
+    border-radius: 100px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(40px, 6.5vw, 80px);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    max-width: 800px;
+  }
+
+  .hero p {
+    font-size: 19px;
+    color: var(--text-muted);
+    max-width: 540px;
+    line-height: 1.65;
+    margin-bottom: 36px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--text);
+    color: var(--bg);
+    padding: 14px 32px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s var(--ease);
+    border: none;
+    cursor: pointer;
+    letter-spacing: -0.01em;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .btn-primary:active { transform: translateY(0) scale(0.98); }
+
+  .btn-primary .arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 100px;
+    transition: transform 0.3s var(--ease);
+    font-size: 14px;
+  }
+
+  .btn-primary:hover .arrow { transform: translate(2px, -1px); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface);
+    color: var(--text);
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s var(--ease);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero-image {
+    margin-top: 64px;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+
+  .hero-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-lg);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+    pointer-events: none;
+  }
+
+  /* ═══════════════ SECTIONS COMMON ═══════════════ */
+  .section {
+    padding: 100px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    max-width: 600px;
+  }
+
+  .section-desc {
+    font-size: 17px;
+    color: var(--text-muted);
+    max-width: 560px;
+    line-height: 1.65;
+    margin-bottom: 48px;
+  }
+
+  /* ═══════════════ ABOUT ═══════════════ */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .about-image {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+  }
+
+  .about-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-lg);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+    pointer-events: none;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .stat {
+    padding: 20px;
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .stat-number {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--accent);
+    line-height: 1.1;
+  }
+
+  .stat-label {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* ═══════════════ SERVICES ═══════════════ */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .service-card {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s var(--ease);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s var(--ease);
+  }
+
+  .service-card:hover::before { transform: scaleX(1); }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--accent-light);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  .service-card p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ═══════════════ PORTFOLIO ═══════════════ */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .portfolio-item {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 16/10;
+    cursor: pointer;
+  }
+
+  .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease);
+  }
+
+  .portfolio-item:hover img { transform: scale(1.05); }
+
+  .portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px;
+    opacity: 0;
+    transition: opacity 0.4s var(--ease);
+  }
+
+  .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+
+  .portfolio-overlay h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .portfolio-overlay p {
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  /* ═══════════════ TEAM ═══════════════ */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+
+  .team-member {
+    text-align: center;
+  }
+
+  .team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    object-fit: cover;
+    margin: 0 auto 16px;
+    display: block;
+    box-shadow: var(--shadow-md);
+  }
+
+  .team-member h3 {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .team-member p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  /* ═══════════════ TESTIMONIALS ═══════════════ */
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .testimonial {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .testimonial-quote {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text);
+    font-style: italic;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid var(--accent);
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .testimonial-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background: var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--accent);
+  }
+
+  .testimonial-name {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .testimonial-role {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* ═══════════════ CTA ═══════════════ */
+  .cta-section {
+    text-align: center;
+    padding: 80px 24px;
+  }
+
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--text);
+    color: var(--bg);
+    border-radius: var(--radius-lg);
+    padding: 64px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 60%;
+    height: 100%;
+    background: radial-gradient(ellipse, var(--accent) 0%, transparent 70%);
+    opacity: 0.12;
+    pointer-events: none;
+  }
+
+  .cta-card h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin-bottom: 12px;
+    line-height: 1.15;
+  }
+
+  .cta-card p {
+    font-size: 17px;
+    opacity: 0.7;
+    max-width: 480px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+  }
+
+  .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg);
+    color: var(--text);
+    padding: 16px 36px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s var(--ease);
+    letter-spacing: -0.01em;
+  }
+
+  .btn-cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .btn-cta:active { transform: scale(0.98); }
+
+  /* ═══════════════ FOOTER ═══════════════ */
+  .footer {
+    padding: 48px 24px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-left {
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  .footer-left strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--text); }
+
+  .footer-note {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ═══════════════ ANIMATIONS ═══════════════ */
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ═══════════════ RESPONSIVE ═══════════════ */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-toggle { display: block; }
+
+    .hero { padding: 100px 20px 60px; min-height: auto; }
+    .hero h1 { font-size: 36px; }
+    .hero p { font-size: 17px; }
+    .hero-image { margin-top: 40px; }
+
+    .section { padding: 64px 20px; }
+    .section-title { font-size: 28px; }
+
+    .about { grid-template-columns: 1fr; gap: 32px; }
+    .about-stats { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .stat { padding: 16px; }
+    .stat-number { font-size: 24px; }
+
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card { padding: 24px 20px; }
+
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .portfolio-overlay { opacity: 1; }
+
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .testimonial-grid { grid-template-columns: 1fr; }
+
+    .cta-card { padding: 40px 24px; }
+
+    .footer { flex-direction: column; text-align: center; }
+  }
+
+  /* ═══════════════ PREFERS REDUCED MOTION ═══════════════ */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      
+      <span class="nav-logo-text">H&C Metallbau GmbH</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">Über uns</a></li>
+      <li><a href="#services">Leistungen</a></li>
+      <li><a href="#portfolio">Referenzen</a></li>
+      <li><a href="#contact" class="nav-cta">Kontakt</a></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">Über uns</a>
+  <a href="#services" onclick="closeMobile()">Leistungen</a>
+  <a href="#portfolio" onclick="closeMobile()">Referenzen</a>
+  <a href="#contact" onclick="closeMobile()">Kontakt</a>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="reveal">
+    <div class="hero-badge">Maschinenbau</div>
+    <h1>Metallbau, der hält was er verspricht</h1>
+    <p>H&C Metallbau GmbH realisiert anspruchsvolle Stahl- und Metallkonstruktionen – vom Einzelteil bis zur kompletten Anlage. Präzision und Termintreue sind keine Versprechen, sondern unser Standard.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">
+        Gespräch vereinbaren
+        <span class="arrow">&#8599;</span>
+      </a>
+      <a href="#services" class="btn-secondary">Leistungen ansehen</a>
+    </div>
+  </div>
+  <div class="hero-image reveal reveal-delay-2">
+    <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=1200&h=800&fit=crop" alt="H&C Metallbau GmbH — Metall. Präzise. Zuverlässig.">
+  </div>
+</section>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<section class="section" id="about">
+  <div class="about">
+    <div class="reveal">
+      <div class="section-label">Über H&C Metallbau GmbH</div>
+      <h2 class="section-title">Handwerk trifft Ingenieurskunst</h2>
+      <p class="section-desc">H&C Metallbau GmbH steht für solide Metallverarbeitung mit technischem Anspruch. Unser erfahrenes Team fertigt und montiert Konstruktionen, die industriellen Belastungen standhalten – mit modernen Maschinen und dem Blick fürs Detail. Was wir bauen, bauen wir richtig.</p>
+      <div class="about-stats">
+        
+        <div class="stat">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Jahre Erfahrung</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">realisierte Projekte</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Mitarbeiter</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Eigenleistung</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-image reveal reveal-delay-1">
+      <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&h=600&fit=crop" alt="H&C Metallbau GmbH Team">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SERVICES ═══════════ -->
+<section class="section" id="services" style="background: var(--surface); margin: 0; max-width: 100%; padding-left: calc((100% - 1200px)/2 + 24px); padding-right: calc((100% - 1200px)/2 + 24px);">
+  <div class="reveal">
+    <div class="section-label">Leistungen</div>
+    <h2 class="section-title">Unsere Leistungen</h2>
+    <p class="section-desc">Von der Konstruktion über die Fertigung bis zur Montage – alles aus einer Hand.</p>
+  </div>
+  <div class="services-grid">
+    
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-icon">⚙️</div>
+      <h3>Stahlkonstruktionen</h3>
+      <p>Planung und Fertigung von Trägern, Rahmen und Tragwerken nach Zeichnung oder individueller Anforderung. Auch für statisch beanspruchte Sonderkonstruktionen.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-icon">🔩</div>
+      <h3>Schlosserei & Einzelteilfertigung</h3>
+      <p>Präzisionsteile, Halterungen, Gestelle und Sonderanfertigungen – verarbeitet nach Maß und mit engen Toleranzen.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-icon">🏗️</div>
+      <h3>Montage & Schweißtechnik</h3>
+      <p>Professionelle Montage vor Ort sowie zertifizierte Schweißarbeiten in MIG/MAG und WIG – für dauerhaft tragfähige Verbindungen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PORTFOLIO ═══════════ -->
+<section class="section" id="portfolio">
+  <div class="reveal">
+    <div class="section-label">Referenzen</div>
+    <h2 class="section-title">Ausgewählte Projekte</h2>
+    <p class="section-desc">Ein Einblick in realisierte Konstruktionen und Fertigungsaufträge aus dem Maschinen- und Anlagenbau.</p>
+  </div>
+  <div class="portfolio-grid">
+    
+    <div class="portfolio-item reveal reveal-delay-1">
+      <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=500&fit=crop" alt="Projekt 1" loading="lazy">
+      <div class="portfolio-overlay">
+        <h3>Projekt 1</h3>
+        <p>H&C Metallbau GmbH</p>
+      </div>
+    </div>
+    <div class="portfolio-item reveal reveal-delay-2">
+      <img src="https://images.unsplash.com/photo-1537462715791-ed9b00e0e133?w=800&h=500&fit=crop" alt="Projekt 2" loading="lazy">
+      <div class="portfolio-overlay">
+        <h3>Projekt 2</h3>
+        <p>H&C Metallbau GmbH</p>
+      </div>
+    </div>
+    <div class="portfolio-item reveal reveal-delay-3">
+      <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=1200&h=800&fit=crop" alt="Projekt 3" loading="lazy">
+      <div class="portfolio-overlay">
+        <h3>Projekt 3</h3>
+        <p>H&C Metallbau GmbH</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TEAM (optional) ═══════════ -->
+
+
+<!-- ═══════════ TESTIMONIALS (optional) ═══════════ -->
+
+
+<!-- ═══════════ CTA ═══════════ -->
+<section class="cta-section" id="contact">
+  <div class="cta-card reveal">
+    <h2>Bereit für den nächsten Schritt?</h2>
+    <p>Schildern Sie uns Ihr Projekt – wir prüfen die technische Umsetzbarkeit und erstellen ein verbindliches Angebot. Schnell, unkompliziert und auf den Punkt.</p>
+    <a href="mailto:info@hc-metallbau.de" class="btn-cta">
+      Jetzt Kontakt aufnehmen
+      <span style="font-size: 18px;">&#8599;</span>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="footer-left">
+    <strong>H&C Metallbau GmbH</strong> &mdash; Metall. Präzise. Zuverlässig.
+  </div>
+  <ul class="footer-links">
+    <li><a href="#about">Über uns</a></li>
+    <li><a href="#services">Leistungen</a></li>
+    <li><a href="#contact">Kontakt</a></li>
+  </ul>
+  <div class="footer-note">
+    Website-Entwurf erstellt von <strong>Film-labor</strong> &mdash; Filmproduktion & Digitale Medien
+  </div>
+</footer>
+
+<script>
+  // ── Nav scroll effect ──
+  const nav = document.getElementById('nav');
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // ── Mobile menu ──
+  const toggle = document.getElementById('mobileToggle');
+  const menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    menu.classList.toggle('active');
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+  });
+  function closeMobile() {
+    toggle.classList.remove('active');
+    menu.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // ── Scroll reveal (IntersectionObserver) ──
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  reveals.forEach(el => observer.observe(el));
+
+  // ── Smooth scroll for anchor links ──
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
