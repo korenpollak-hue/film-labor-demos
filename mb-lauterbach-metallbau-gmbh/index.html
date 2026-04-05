@@ -3,1030 +3,856 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MB Lauterbach Metallbau GmbH — Metall. Präzise. Dauerhaft.</title>
-<meta name="description" content="MB Lauterbach Metallbau GmbH – Stahlbau, Schlosserei und Montageleistungen für Industrie und Gewerbe. Präzise Fertigung. Zuverlässige Montage.">
+<title>MB Lauterbach Metallbau GmbH — Metall. Präzise. Verlässlich.</title>
+<meta name="description" content="MB Lauterbach Metallbau GmbH – Ihr Partner für Stahlbau, Sonderfertigung und Maschinenbaukomponenten. Präzise Fertigung, zuverlässige Montage.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #faf9f7;
-    --surface: #ffffff;
-    --text: #171717;
-    --text-muted: #6b6b6b;
-    --text-light: #999;
-    --accent: oklch(0.50 0.10 240);
-    --accent-light: oklch(0.95 0.02 240);
-    --border: #e8e6e3;
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.06);
-    --shadow-md: 0 2px 8px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
-    --shadow-lg: 0 4px 12px rgba(0,0,0,0.06), 0 8px 32px rgba(0,0,0,0.06);
-    --shadow-xl: 0 8px 24px rgba(0,0,0,0.08), 0 16px 48px rgba(0,0,0,0.06);
-    --radius: 16px;
-    --radius-lg: 24px;
-    --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-  }
-
-  /* ═══════════════ NAV ═══════════════ */
-  .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    padding: 16px 24px;
-    transition: all 0.4s var(--ease);
-  }
-
-  .nav.scrolled {
-    background: rgba(250, 249, 247, 0.85);
-    backdrop-filter: blur(20px) saturate(1.4);
-    -webkit-backdrop-filter: blur(20px) saturate(1.4);
-    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-  }
-
-  .nav-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: var(--text);
-  }
-
-  .nav-logo img {
-    height: 32px;
-    width: auto;
-    border-radius: 6px;
-  }
-
-  .nav-logo-text {
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: -0.02em;
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    list-style: none;
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    color: var(--text-muted);
-    font-size: 15px;
-    font-weight: 500;
-    transition: color 0.25s var(--ease);
-    letter-spacing: -0.01em;
-  }
-
-  .nav-links a:hover { color: var(--text); }
-
-  .nav-cta {
-    background: var(--text);
-    color: var(--bg) !important;
-    padding: 10px 24px;
-    border-radius: 100px;
-    font-weight: 500;
-    font-size: 14px;
-    transition: all 0.3s var(--ease);
-  }
-
-  .nav-cta:hover {
-    transform: scale(1.03);
-    box-shadow: var(--shadow-md);
-  }
-
-  .nav-cta:active { transform: scale(0.98); }
-
-  .mobile-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    position: relative;
-  }
-
-  .mobile-toggle span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: var(--text);
-    position: absolute;
-    left: 9px;
-    transition: all 0.35s var(--ease);
-    border-radius: 2px;
-  }
-
-  .mobile-toggle span:nth-child(1) { top: 13px; }
-  .mobile-toggle span:nth-child(2) { top: 19px; }
-  .mobile-toggle span:nth-child(3) { top: 25px; }
-
-  .mobile-toggle.active span:nth-child(1) { top: 19px; transform: rotate(45deg); }
-  .mobile-toggle.active span:nth-child(2) { opacity: 0; }
-  .mobile-toggle.active span:nth-child(3) { top: 19px; transform: rotate(-45deg); }
-
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(250, 249, 247, 0.97);
-    backdrop-filter: blur(24px);
-    z-index: 99;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-  }
-
-  .mobile-menu.active { display: flex; }
-
-  .mobile-menu a {
-    font-size: 28px;
-    font-weight: 500;
-    color: var(--text);
-    text-decoration: none;
-    letter-spacing: -0.02em;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeSlideUp 0.5s var(--ease) forwards;
-  }
-
-  .mobile-menu a:nth-child(1) { animation-delay: 0.05s; }
-  .mobile-menu a:nth-child(2) { animation-delay: 0.1s; }
-  .mobile-menu a:nth-child(3) { animation-delay: 0.15s; }
-  .mobile-menu a:nth-child(4) { animation-delay: 0.2s; }
-  .mobile-menu a:nth-child(5) { animation-delay: 0.25s; }
-
-  /* ═══════════════ HERO ═══════════════ */
-  .hero {
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 120px 24px 80px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -40%;
-    right: -20%;
-    width: 60%;
-    height: 80%;
-    background: radial-gradient(ellipse, var(--accent-light) 0%, transparent 70%);
-    opacity: 0.5;
-    pointer-events: none;
-  }
-
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--accent-light);
-    color: var(--accent);
-    font-size: 13px;
-    font-weight: 600;
-    padding: 7px 16px;
-    border-radius: 100px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-  }
-
-  .hero h1 {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(40px, 6.5vw, 80px);
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    line-height: 1.05;
-    margin-bottom: 20px;
-    max-width: 800px;
-  }
-
-  .hero p {
-    font-size: 19px;
-    color: var(--text-muted);
-    max-width: 540px;
-    line-height: 1.65;
-    margin-bottom: 36px;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--text);
-    color: var(--bg);
-    padding: 14px 32px;
-    border-radius: 100px;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s var(--ease);
-    border: none;
-    cursor: pointer;
-    letter-spacing: -0.01em;
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .btn-primary:active { transform: translateY(0) scale(0.98); }
-
-  .btn-primary .arrow {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    background: rgba(255,255,255,0.15);
-    border-radius: 100px;
-    transition: transform 0.3s var(--ease);
-    font-size: 14px;
-  }
-
-  .btn-primary:hover .arrow { transform: translate(2px, -1px); }
-
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--surface);
-    color: var(--text);
-    padding: 14px 28px;
-    border-radius: 100px;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s var(--ease);
-    box-shadow: var(--shadow-sm);
-  }
-
-  .btn-secondary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-  }
-
-  .hero-image {
-    margin-top: 64px;
-    width: 100%;
-    max-width: 1000px;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-xl);
-    position: relative;
-  }
-
-  .hero-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    aspect-ratio: 16/9;
-  }
-
-  .hero-image::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: var(--radius-lg);
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
-    pointer-events: none;
-  }
-
-  /* ═══════════════ SECTIONS COMMON ═══════════════ */
-  .section {
-    padding: 100px 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .section-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 16px;
-  }
-
-  .section-title {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(28px, 4vw, 44px);
-    font-weight: 600;
-    letter-spacing: -0.03em;
-    line-height: 1.15;
-    margin-bottom: 16px;
-    max-width: 600px;
-  }
-
-  .section-desc {
-    font-size: 17px;
-    color: var(--text-muted);
-    max-width: 560px;
-    line-height: 1.65;
-    margin-bottom: 48px;
-  }
-
-  /* ═══════════════ ABOUT ═══════════════ */
-  .about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
-  }
-
-  .about-image {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    position: relative;
-  }
-
-  .about-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    aspect-ratio: 4/3;
-  }
-
-  .about-image::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: var(--radius-lg);
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
-    pointer-events: none;
-  }
-
-  .about-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-top: 40px;
-  }
-
-  .stat {
-    padding: 20px;
-    background: var(--surface);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-sm);
-  }
-
-  .stat-number {
-    font-family: 'Fraunces', serif;
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    color: var(--accent);
-    line-height: 1.1;
-  }
-
-  .stat-label {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-top: 4px;
-  }
-
-  /* ═══════════════ SERVICES ═══════════════ */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .service-card {
-    background: var(--surface);
-    border-radius: var(--radius-lg);
-    padding: 32px 28px;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.4s var(--ease);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--accent);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s var(--ease);
-  }
-
-  .service-card:hover::before { transform: scaleX(1); }
-
-  .service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .service-icon {
-    width: 48px;
-    height: 48px;
-    background: var(--accent-light);
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-
-  .service-card h3 {
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
-  }
-
-  .service-card p {
-    font-size: 15px;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
-
-  /* ═══════════════ PORTFOLIO ═══════════════ */
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .portfolio-item {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    position: relative;
-    aspect-ratio: 16/10;
-    cursor: pointer;
-  }
-
-  .portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s var(--ease);
-  }
-
-  .portfolio-item:hover img { transform: scale(1.05); }
-
-  .portfolio-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 28px;
-    opacity: 0;
-    transition: opacity 0.4s var(--ease);
-  }
-
-  .portfolio-item:hover .portfolio-overlay { opacity: 1; }
-
-  .portfolio-overlay h3 {
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-  }
-
-  .portfolio-overlay p {
-    color: rgba(255,255,255,0.75);
-    font-size: 14px;
-    margin-top: 4px;
-  }
-
-  /* ═══════════════ TEAM ═══════════════ */
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
-  }
-
-  .team-member {
-    text-align: center;
-  }
-
-  .team-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 100px;
-    object-fit: cover;
-    margin: 0 auto 16px;
-    display: block;
-    box-shadow: var(--shadow-md);
-  }
-
-  .team-member h3 {
-    font-size: 17px;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-  }
-
-  .team-member p {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-top: 2px;
-  }
-
-  /* ═══════════════ TESTIMONIALS ═══════════════ */
-  .testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .testimonial {
-    background: var(--surface);
-    border-radius: var(--radius-lg);
-    padding: 32px;
-    box-shadow: var(--shadow-sm);
-  }
-
-  .testimonial-quote {
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--text);
-    font-style: italic;
-    margin-bottom: 20px;
-    position: relative;
-    padding-left: 20px;
-    border-left: 3px solid var(--accent);
-  }
-
-  .testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .testimonial-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 100px;
-    background: var(--accent-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 16px;
-    color: var(--accent);
-  }
-
-  .testimonial-name {
-    font-weight: 600;
-    font-size: 15px;
-  }
-
-  .testimonial-role {
-    font-size: 13px;
-    color: var(--text-muted);
-  }
-
-  /* ═══════════════ CTA ═══════════════ */
-  .cta-section {
-    text-align: center;
-    padding: 80px 24px;
-  }
-
-  .cta-card {
-    max-width: 800px;
-    margin: 0 auto;
-    background: var(--text);
-    color: var(--bg);
-    border-radius: var(--radius-lg);
-    padding: 64px 48px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cta-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -30%;
-    width: 60%;
-    height: 100%;
-    background: radial-gradient(ellipse, var(--accent) 0%, transparent 70%);
-    opacity: 0.12;
-    pointer-events: none;
-  }
-
-  .cta-card h2 {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(28px, 4vw, 40px);
-    font-weight: 600;
-    letter-spacing: -0.03em;
-    margin-bottom: 12px;
-    line-height: 1.15;
-  }
-
-  .cta-card p {
-    font-size: 17px;
-    opacity: 0.7;
-    max-width: 480px;
-    margin: 0 auto 32px;
-    line-height: 1.6;
-  }
-
-  .btn-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--bg);
-    color: var(--text);
-    padding: 16px 36px;
-    border-radius: 100px;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s var(--ease);
-    letter-spacing: -0.01em;
-  }
-
-  .btn-cta:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: var(--shadow-xl);
-  }
-
-  .btn-cta:active { transform: scale(0.98); }
-
-  /* ═══════════════ FOOTER ═══════════════ */
-  .footer {
-    padding: 48px 24px 32px;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .footer-left {
-    font-size: 14px;
-    color: var(--text-muted);
-  }
-
-  .footer-left strong {
-    color: var(--text);
-    font-weight: 600;
-  }
-
-  .footer-links {
-    display: flex;
-    gap: 24px;
-    list-style: none;
-  }
-
-  .footer-links a {
-    font-size: 14px;
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .footer-links a:hover { color: var(--text); }
-
-  .footer-note {
-    width: 100%;
-    text-align: center;
-    font-size: 12px;
-    color: var(--text-light);
-    margin-top: 24px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-  }
-
-  /* ═══════════════ ANIMATIONS ═══════════════ */
-  @keyframes fadeSlideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(32px);
-    transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
-  }
-
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-  .reveal-delay-4 { transition-delay: 0.4s; }
-
-  /* ═══════════════ RESPONSIVE ═══════════════ */
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .mobile-toggle { display: block; }
-
-    .hero { padding: 100px 20px 60px; min-height: auto; }
-    .hero h1 { font-size: 36px; }
-    .hero p { font-size: 17px; }
-    .hero-image { margin-top: 40px; }
-
-    .section { padding: 64px 20px; }
-    .section-title { font-size: 28px; }
-
-    .about { grid-template-columns: 1fr; gap: 32px; }
-    .about-stats { grid-template-columns: 1fr 1fr; gap: 12px; }
-    .stat { padding: 16px; }
-    .stat-number { font-size: 24px; }
-
-    .services-grid { grid-template-columns: 1fr; }
-    .service-card { padding: 24px 20px; }
-
-    .portfolio-grid { grid-template-columns: 1fr; }
-    .portfolio-overlay { opacity: 1; }
-
-    .team-grid { grid-template-columns: repeat(2, 1fr); }
-
-    .testimonial-grid { grid-template-columns: 1fr; }
-
-    .cta-card { padding: 40px 24px; }
-
-    .footer { flex-direction: column; text-align: center; }
-  }
-
-  /* ═══════════════ PREFERS REDUCED MOTION ═══════════════ */
-  @media (prefers-reduced-motion: reduce) {
-    .reveal { opacity: 1; transform: none; transition: none; }
-    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-  }
+:root {
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --surface-2: #1a1a1a;
+  --text: #fafaf9;
+  --text-muted: #8a8a8a;
+  --text-dim: #555;
+  --accent: oklch(0.50 0.10 240);
+  --accent-glow: oklch(0.95 0.02 240);
+  --border: rgba(255,255,255,0.06);
+  --glass: rgba(255,255,255,0.03);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ═══ FILM GRAIN OVERLAY ═══ */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 128px;
+}
+
+/* ═══ FLOATING NAV (Glass Pill) ═══ */
+.nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: rgba(10,10,10,0.6);
+  backdrop-filter: blur(24px) saturate(1.5);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 10px 12px 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  transition: all 0.5s var(--ease);
+}
+
+.nav:hover { border-color: rgba(255,255,255,0.1); }
+
+.nav-logo {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 14px;
+  border-radius: 100px;
+  transition: all 0.3s var(--ease);
+}
+
+.nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.06); }
+
+.nav-cta {
+  background: var(--text) !important;
+  color: var(--bg) !important;
+  font-weight: 500 !important;
+  padding: 8px 20px !important;
+}
+
+.nav-cta:hover { transform: scale(1.04); }
+
+/* ═══ HERO — CINEMATIC ═══ */
+.hero {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 140px 48px 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  opacity: 0.07;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.hero-glow-2 {
+  position: absolute;
+  bottom: -30%;
+  left: -15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  opacity: 0.04;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 900px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 28px;
+  padding: 6px 0;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.hero h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(44px, 7vw, 88px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.0;
+  margin-bottom: 28px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 500px;
+  line-height: 1.7;
+  margin-bottom: 44px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.4s var(--ease);
+  cursor: pointer;
+  border: none;
+  letter-spacing: -0.01em;
+  position: relative;
+}
+
+.btn-primary {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(255,255,255,0.12);
+}
+
+.btn-primary:active { transform: translateY(0) scale(0.98); }
+
+.btn-primary .icon {
+  width: 24px; height: 24px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 100px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  transition: transform 0.3s var(--ease);
+}
+
+.btn-primary:hover .icon { transform: translate(2px, -1px); }
+
+.btn-ghost {
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+  border-color: rgba(255,255,255,0.15);
+  background: var(--glass);
+}
+
+/* ═══ 3D TILT IMAGE SHOWCASE ═══ */
+.showcase {
+  padding: 0 48px 120px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.showcase-frame {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  perspective: 1000px;
+  cursor: default;
+}
+
+.showcase-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-out);
+  will-change: transform;
+}
+
+.showcase-frame:hover .showcase-img {
+  transform: scale(1.02);
+}
+
+.showcase-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+  pointer-events: none;
+}
+
+.showcase-reflection {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 50%);
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.showcase-frame:hover .showcase-reflection { opacity: 0.5; }
+
+/* ═══ BENTO GRID (Asymmetric) ═══ */
+.section {
+  padding: 100px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.section-desc {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 56px;
+}
+
+/* Stats Row */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.stat {
+  background: var(--surface);
+  padding: 36px 32px;
+  text-align: center;
+  transition: background 0.3s var(--ease);
+}
+
+.stat:hover { background: var(--surface-2); }
+
+.stat-num {
+  font-family: 'Fraunces', serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-top: 8px;
+  letter-spacing: 0.02em;
+}
+
+/* Service Cards — Double Bezel */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.svc-card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 2px;
+  transition: all 0.5s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.svc-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent 50%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.svc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+}
+
+.svc-inner {
+  background: var(--surface);
+  border-radius: 18px;
+  padding: 32px 28px;
+}
+
+.svc-icon {
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+}
+
+.svc-inner h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.svc-inner p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ═══ PORTFOLIO — HOVER REVEAL ═══ */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 300px 300px;
+  gap: 16px;
+}
+
+.portfolio-grid .p-item:first-child {
+  grid-row: 1 / 3;
+}
+
+.p-item {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.p-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease-out), filter 0.5s;
+  filter: brightness(0.85) saturate(0.9);
+}
+
+.p-item:hover img {
+  transform: scale(1.06);
+  filter: brightness(1) saturate(1);
+}
+
+.p-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
+  transition: opacity 0.4s;
+}
+
+.p-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 28px;
+  z-index: 2;
+  transform: translateY(8px);
+  opacity: 0;
+  transition: all 0.5s var(--ease);
+}
+
+.p-item:hover .p-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.p-overlay h3 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.p-overlay span {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ═══ CTA — MASSIVE DARK CARD ═══ */
+.cta {
+  padding: 80px 48px 120px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cta-card {
+  background: var(--surface);
+  border-radius: 28px;
+  padding: 80px 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.cta-card::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  opacity: 0.06;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.cta-card h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  line-height: 1.15;
+  position: relative;
+}
+
+.cta-card p {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 440px;
+  margin: 0 auto 36px;
+  line-height: 1.65;
+}
+
+/* ═══ FOOTER ═══ */
+.footer {
+  padding: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-left { font-size: 14px; color: var(--text-dim); }
+.footer-left strong { color: var(--text-muted); font-weight: 500; }
+
+.footer-links { display: flex; gap: 24px; list-style: none; }
+.footer-links a { font-size: 13px; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--text-muted); }
+
+.footer-credit {
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  letter-spacing: 0.04em;
+}
+
+/* ═══ SCROLL ANIMATIONS ═══ */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  filter: blur(4px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out), filter 0.8s var(--ease-out);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.1s; }
+.stagger-3 { transition-delay: 0.15s; }
+.stagger-4 { transition-delay: 0.2s; }
+
+/* ═══ MARQUEE ═══ */
+.marquee-wrap {
+  overflow: hidden;
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 80px;
+}
+
+.marquee {
+  display: flex;
+  gap: 64px;
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+.marquee span {
+  font-family: 'Fraunces', serif;
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  color: var(--text-dim);
+  white-space: nowrap;
+  font-style: italic;
+}
+
+.marquee span::after {
+  content: ' / ';
+  color: var(--border);
+  padding: 0 16px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+  .nav { top: 12px; padding: 8px 10px 8px 16px; gap: 12px; }
+  .nav-links { display: none; }
+  .hero { padding: 120px 24px 80px; }
+  .hero h1 { font-size: 38px; }
+  .showcase { padding: 0 24px 80px; }
+  .section { padding: 64px 24px; }
+  .stats-row { grid-template-columns: 1fr 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .portfolio-grid .p-item:first-child { grid-row: auto; }
+  .p-item { aspect-ratio: 16/10; }
+  .p-overlay { opacity: 1; transform: translateY(0); }
+  .cta { padding: 48px 24px 80px; }
+  .cta-card { padding: 48px 28px; }
+  .footer { padding: 32px 24px; }
+  .marquee span { font-size: 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; filter: none; transition: none; }
+  .marquee { animation: none; }
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
 </style>
 </head>
 <body>
 
-<!-- ═══════════ NAV ═══════════ -->
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      
-      <span class="nav-logo-text">MB Lauterbach Metallbau GmbH</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#about">Über uns</a></li>
-      <li><a href="#services">Leistungen</a></li>
-      <li><a href="#portfolio">Referenzen</a></li>
-      <li><a href="#contact" class="nav-cta">Kontakt</a></li>
-    </ul>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<!-- NAV (Floating Glass Pill) -->
+<nav class="nav">
+  <a href="#" class="nav-logo">MB Lauterbach Metallbau GmbH</a>
+  <ul class="nav-links">
+    <li><a href="#about">Leistungen</a></li>
+    <li><a href="#work">Projekte</a></li>
+    <li><a href="#contact" class="nav-cta">Kontakt</a></li>
+  </ul>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="closeMobile()">Über uns</a>
-  <a href="#services" onclick="closeMobile()">Leistungen</a>
-  <a href="#portfolio" onclick="closeMobile()">Referenzen</a>
-  <a href="#contact" onclick="closeMobile()">Kontakt</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal">Metallbau</div>
+    <h1 class="reveal stagger-1">Metallbau mit Präzision und Erfahrung</h1>
+    <p class="hero-sub reveal stagger-2">MB Lauterbach realisiert anspruchsvolle Metallbau-Projekte für den Maschinenbau – von der Einzelfertigung bis zur Serienmontage.</p>
+    <div class="hero-actions reveal stagger-3">
+      <a href="#contact" class="btn btn-primary">
+        Kontakt aufnehmen
+        <span class="icon">&#8599;</span>
+      </a>
+      <a href="#about" class="btn btn-ghost">Leistungen</a>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE IMAGE (3D Tilt) -->
+<div class="showcase">
+  <div class="showcase-frame reveal" id="tiltFrame">
+    <img class="showcase-img" src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=1200&h=800&fit=crop" alt="MB Lauterbach Metallbau GmbH">
+    <div class="showcase-reflection"></div>
+  </div>
 </div>
 
-<!-- ═══════════ HERO ═══════════ -->
-<section class="hero">
-  <div class="reveal">
-    <div class="hero-badge">Metallbau</div>
-    <h1>Metallbau mit Präzision und Erfahrung</h1>
-    <p>MB Lauterbach Metallbau GmbH fertigt und montiert Stahlkonstruktionen, Schlosserei- und Metallbauarbeiten für Industrie und Gewerbe. Qualität, die trägt.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">
-        Gespräch vereinbaren
-        <span class="arrow">&#8599;</span>
-      </a>
-      <a href="#services" class="btn-secondary">Leistungen ansehen</a>
-    </div>
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>Stahlbau & Konstruktion</span><span>Maschinenbau & Sonderfertigung</span><span>Montage & Instandhaltung</span>
+    <span>Stahlbau & Konstruktion</span><span>Maschinenbau & Sonderfertigung</span><span>Montage & Instandhaltung</span>
   </div>
-  <div class="hero-image reveal reveal-delay-2">
-    <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=1200&h=800&fit=crop" alt="MB Lauterbach Metallbau GmbH — Metall. Präzise. Dauerhaft.">
-  </div>
-</section>
+</div>
 
-<!-- ═══════════ ABOUT ═══════════ -->
-<section class="section" id="about">
-  <div class="about">
-    <div class="reveal">
-      <div class="section-label">Über MB Lauterbach Metallbau GmbH</div>
-      <h2 class="section-title">Handwerk trifft Ingenieurskunst</h2>
-      <p class="section-desc">Als inhabergeführtes Metallbauunternehmen verbinden wir jahrzehntelange Erfahrung mit moderner Fertigungstechnik. Von der Planung bis zur Montage übernehmen wir Verantwortung für jedes Detail. Unsere Stärke liegt in maßgeschneiderten Lösungen für anspruchsvolle Projekte in der Industrie.</p>
-      <div class="about-stats">
-        
-        <div class="stat">
-          <div class="stat-number">25+</div>
-          <div class="stat-label">Jahre Erfahrung</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">800+</div>
-          <div class="stat-label">Projekte</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">20+</div>
-          <div class="stat-label">Fachkräfte</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Termintreue</div>
-        </div>
-      </div>
+<!-- STATS -->
+<div class="section">
+  <div class="stats-row reveal">
+    
+    <div class="stat">
+      <div class="stat-num">20+</div>
+      <div class="stat-label">Jahre Erfahrung</div>
     </div>
-    <div class="about-image reveal reveal-delay-1">
-      <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&h=600&fit=crop" alt="MB Lauterbach Metallbau GmbH Team">
+    <div class="stat">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Projekte</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">50+</div>
+      <div class="stat-label">Mitarbeiter</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Qualität</div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ═══════════ SERVICES ═══════════ -->
-<section class="section" id="services" style="background: var(--surface); margin: 0; max-width: 100%; padding-left: calc((100% - 1200px)/2 + 24px); padding-right: calc((100% - 1200px)/2 + 24px);">
-  <div class="reveal">
-    <div class="section-label">Leistungen</div>
-    <h2 class="section-title">Unsere Leistungen</h2>
-    <p class="section-desc">Vom Einzelteil bis zur kompletten Stahlkonstruktion – wir liefern, was Ihre Anlage trägt.</p>
-  </div>
+<!-- SERVICES -->
+<section class="section" id="about" style="padding-top: 0;">
+  <div class="section-eyebrow reveal">Leistungen</div>
+  <h2 class="section-title reveal stagger-1">Unsere Leistungen</h2>
+  <p class="section-desc reveal stagger-2">Vom Stahlbau über Sonderkonstruktionen bis zur Instandhaltung – wir decken das gesamte Spektrum des industriellen Metallbaus ab.</p>
   <div class="services-grid">
     
-    <div class="service-card reveal reveal-delay-1">
-      <div class="service-icon">⚙️</div>
-      <h3>Stahlbau & Konstruktion</h3>
-      <p>Planung und Fertigung von Stahlkonstruktionen für Industrie- und Gewerbeanlagen. Vom Träger bis zur kompletten Tragstruktur.</p>
+    <div class="svc-card reveal stagger-1">
+      <div class="svc-inner">
+        <div class="svc-icon">⚙️</div>
+        <h3>Stahlbau & Konstruktion</h3>
+        <p>Planung und Fertigung von Stahlkonstruktionen nach Zeichnung oder eigenem Entwurf. Verarbeitung aller gängigen Stahlgüten und Sonderwerkstoffe.</p>
+      </div>
     </div>
-    <div class="service-card reveal reveal-delay-2">
-      <div class="service-icon">🔧</div>
-      <h3>Schlosserei & Schweißtechnik</h3>
-      <p>Präzisionsschweißen, Schlosserarbeiten und Sonderkonstruktionen nach Zeichnung oder Aufmaß – auch in Kleinserien.</p>
+    <div class="svc-card reveal stagger-2">
+      <div class="svc-inner">
+        <div class="svc-icon">🔧</div>
+        <h3>Maschinenbau & Sonderfertigung</h3>
+        <p>Einzelteile, Baugruppen und Sonderkonstruktionen für den Maschinenbau – präzise gefertigt und termingerecht geliefert.</p>
+      </div>
     </div>
-    <div class="service-card reveal reveal-delay-3">
-      <div class="service-icon">🏗️</div>
-      <h3>Montage & Umbau</h3>
-      <p>Professionelle Montage vor Ort sowie Umbau und Modernisierung bestehender Anlagen und Konstruktionen.</p>
+    <div class="svc-card reveal stagger-3">
+      <div class="svc-inner">
+        <div class="svc-icon">🏗️</div>
+        <h3>Montage & Instandhaltung</h3>
+        <p>Fachgerechte Montage vor Ort sowie Wartung und Instandsetzung bestehender Anlagen und Konstruktionen.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ PORTFOLIO ═══════════ -->
-<section class="section" id="portfolio">
-  <div class="reveal">
-    <div class="section-label">Referenzen</div>
-    <h2 class="section-title">Ausgewählte Projekte</h2>
-    <p class="section-desc">Ein Einblick in realisierte Stahlbau- und Metallbauprojekte aus Industrie und Gewerbe.</p>
-  </div>
+<!-- PORTFOLIO -->
+<section class="section" id="work">
+  <div class="section-eyebrow reveal">Projekte</div>
+  <h2 class="section-title reveal stagger-1">Ausgewählte Projekte</h2>
+  <p class="section-desc reveal stagger-2">Ein Auszug aus unseren realisierten Konstruktionen und Fertigungsaufträgen.</p>
   <div class="portfolio-grid">
     
-    <div class="portfolio-item reveal reveal-delay-1">
-      <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=500&fit=crop" alt="Projekt 1" loading="lazy">
-      <div class="portfolio-overlay">
+    <div class="p-item reveal stagger-1">
+      <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&h=600&fit=crop" alt="MB Lauterbach Metallbau GmbH Projekt 1" loading="lazy">
+      <div class="p-overlay">
         <h3>Projekt 1</h3>
-        <p>MB Lauterbach Metallbau GmbH</p>
+        <span>MB Lauterbach Metallbau GmbH</span>
       </div>
     </div>
-    <div class="portfolio-item reveal reveal-delay-2">
-      <img src="https://images.unsplash.com/photo-1537462715791-ed9b00e0e133?w=800&h=500&fit=crop" alt="Projekt 2" loading="lazy">
-      <div class="portfolio-overlay">
+    <div class="p-item reveal stagger-2">
+      <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=500&fit=crop" alt="MB Lauterbach Metallbau GmbH Projekt 2" loading="lazy">
+      <div class="p-overlay">
         <h3>Projekt 2</h3>
-        <p>MB Lauterbach Metallbau GmbH</p>
+        <span>MB Lauterbach Metallbau GmbH</span>
       </div>
     </div>
-    <div class="portfolio-item reveal reveal-delay-3">
-      <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=1200&h=800&fit=crop" alt="Projekt 3" loading="lazy">
-      <div class="portfolio-overlay">
+    <div class="p-item reveal stagger-3">
+      <img src="https://images.unsplash.com/photo-1537462715791-ed9b00e0e133?w=800&h=500&fit=crop" alt="MB Lauterbach Metallbau GmbH Projekt 3" loading="lazy">
+      <div class="p-overlay">
         <h3>Projekt 3</h3>
-        <p>MB Lauterbach Metallbau GmbH</p>
+        <span>MB Lauterbach Metallbau GmbH</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ TEAM (optional) ═══════════ -->
-
-
-<!-- ═══════════ TESTIMONIALS (optional) ═══════════ -->
-
-
-<!-- ═══════════ CTA ═══════════ -->
-<section class="cta-section" id="contact">
+<!-- CTA -->
+<section class="cta" id="contact">
   <div class="cta-card reveal">
     <h2>Bereit für den nächsten Schritt?</h2>
-    <p>Schildern Sie uns Ihr Projekt – wir erstellen Ihnen ein unverbindliches Angebot. Schnell, kompetent und direkt vom Fachbetrieb.</p>
-    <a href="mailto:info@mblauterbach.de" class="btn-cta">
+    <p>Schildern Sie uns Ihr Projekt – wir erstellen Ihnen ein konkretes Angebot. Schnell, unkompliziert und ohne Umwege.</p>
+    <a href="mailto:info@mblauterbach.de" class="btn btn-primary" style="display: inline-flex;">
       Jetzt Kontakt aufnehmen
-      <span style="font-size: 18px;">&#8599;</span>
+      <span class="icon">&#8599;</span>
     </a>
   </div>
 </section>
 
-<!-- ═══════════ FOOTER ═══════════ -->
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-left">
-    <strong>MB Lauterbach Metallbau GmbH</strong> &mdash; Metall. Präzise. Dauerhaft.
-  </div>
+  <div class="footer-left"><strong>MB Lauterbach Metallbau GmbH</strong> &mdash; Metall. Präzise. Verlässlich.</div>
   <ul class="footer-links">
-    <li><a href="#about">Über uns</a></li>
-    <li><a href="#services">Leistungen</a></li>
+    <li><a href="#about">Leistungen</a></li>
+    <li><a href="#work">Projekte</a></li>
     <li><a href="#contact">Kontakt</a></li>
   </ul>
-  <div class="footer-note">
-    Website-Entwurf erstellt von <strong>Film-labor</strong> &mdash; Filmproduktion & Digitale Medien
-  </div>
+  <div class="footer-credit">Website-Entwurf von Film-labor &mdash; Filmproduktion & Digitale Medien</div>
 </footer>
 
 <script>
-  // ── Nav scroll effect ──
-  const nav = document.getElementById('nav');
-  let lastScroll = 0;
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  }, { passive: true });
-
-  // ── Mobile menu ──
-  const toggle = document.getElementById('mobileToggle');
-  const menu = document.getElementById('mobileMenu');
-  toggle.addEventListener('click', () => {
-    toggle.classList.toggle('active');
-    menu.classList.toggle('active');
-    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+// ── Scroll Reveal (blur + slide) ──
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
   });
-  function closeMobile() {
-    toggle.classList.remove('active');
-    menu.classList.remove('active');
-    document.body.style.overflow = '';
-  }
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => obs.observe(el));
 
-  // ── Scroll reveal (IntersectionObserver) ──
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-  reveals.forEach(el => observer.observe(el));
-
-  // ── Smooth scroll for anchor links ──
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
+// ── 3D Tilt on Showcase Image ──
+const frame = document.getElementById('tiltFrame');
+if (frame && window.innerWidth > 768) {
+  frame.addEventListener('mousemove', (e) => {
+    const rect = frame.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    const img = frame.querySelector('.showcase-img');
+    img.style.transform = `scale(1.02) rotateY(${x * 6}deg) rotateX(${-y * 4}deg)`;
+    const ref = frame.querySelector('.showcase-reflection');
+    ref.style.background = `radial-gradient(circle at ${(x+0.5)*100}% ${(y+0.5)*100}%, rgba(255,255,255,0.12) 0%, transparent 60%)`;
   });
+  frame.addEventListener('mouseleave', () => {
+    const img = frame.querySelector('.showcase-img');
+    img.style.transform = 'scale(1) rotateY(0) rotateX(0)';
+  });
+}
+
+// ── Smooth Scroll ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+// ── Parallax on Scroll (Hero Glows) ──
+window.addEventListener('scroll', () => {
+  const s = window.scrollY;
+  const g1 = document.querySelector('.hero-glow');
+  const g2 = document.querySelector('.hero-glow-2');
+  if (g1) g1.style.transform = `translateY(${s * 0.15}px)`;
+  if (g2) g2.style.transform = `translateY(${s * 0.08}px)`;
+}, { passive: true });
 </script>
 
 </body>
