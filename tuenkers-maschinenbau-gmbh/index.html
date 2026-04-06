@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ein Entwurf fuer TÜNKERS Maschinenbau GmbH</title>
-<meta name="description" content="TÜNKERS Maschinenbau GmbH – Pneumatische Spann- und Fördertechnik für die Industrie. Präzise Komponenten und Sonderlösungen aus Deutschland.">
+<meta name="description" content="TÜNKERS Maschinenbau GmbH - Professionelle Lösungen">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,10 +29,27 @@ body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opa
 /* Gradient text */
 .gradient-text{background:linear-gradient(135deg,#6366f1,#fff 60%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
-/* Glow button */
+/* Shimmer Button (Magic UI Pattern) */
+.shimmer-btn{position:relative;overflow:hidden;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s}
+.shimmer-btn::before{content:'';position:absolute;top:0;left:-100%;width:200%;height:100%;background:linear-gradient(90deg,transparent 25%,rgba(255,255,255,.12) 50%,transparent 75%);animation:shimmer 3s ease-in-out infinite}
+@keyframes shimmer{0%{transform:translateX(-50%)}100%{transform:translateX(50%)}}
+.shimmer-btn:hover{transform:translateY(-2px);box-shadow:0 0 24px #6366f155,0 0 64px #6366f122,0 4px 32px rgba(0,0,0,.3)}
+.shimmer-btn:active{transform:translateY(0) scale(.98)}
+
+/* Glow button (secondary) */
 .glow-btn{position:relative;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s}
 .glow-btn:hover{transform:translateY(-2px);box-shadow:0 0 24px #6366f144,0 0 64px #6366f122}
 .glow-btn:active{transform:translateY(0) scale(.98)}
+
+/* Nebula background effect */
+.nebula{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.nebula::before,.nebula::after{content:'';position:absolute;border-radius:50%;filter:blur(120px);mix-blend-mode:screen}
+.nebula::before{width:600px;height:600px;top:-20%;right:-10%;background:conic-gradient(from 180deg,#6366f122,transparent,#6366f111);animation:nebRotate 20s linear infinite}
+.nebula::after{width:400px;height:400px;bottom:-15%;left:-5%;background:conic-gradient(from 0deg,#6366f115,transparent,#6366f108);animation:nebRotate 28s linear infinite reverse}
+@keyframes nebRotate{to{transform:rotate(360deg)}}
+
+/* Smooth scroll-linked opacity for hero content */
+.hero-fade{transition:opacity .1s,transform .1s}
 
 /* Staggered reveal */
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
@@ -91,17 +108,19 @@ body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opa
 
 <!-- KEIN NAVBAR (Tunnel Vision = 2x Conversion) -->
 
-<!-- ══════ HERO: Foto als Fullscreen-Hintergrund ══════ -->
+<!-- ══════ HERO: Foto + Nebula + Shimmer ══════ -->
 <section class="min-h-dvh flex flex-col justify-end px-6 md:px-16 pb-20 relative overflow-hidden">
-  <!-- Hintergrundbild (echtes Firmenfoto) -->
+  <!-- Hintergrundbild -->
   <div class="absolute inset-0">
     <img src="https://www.tuenkers.de/binarydata/Aktuelles/2025/lnk_umformtechnik_de.jpg" alt="" class="w-full h-full object-cover scale-105" id="heroBg">
     <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/70 to-[#0a0a0a]/20"></div>
     <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/80 to-transparent"></div>
   </div>
+  <!-- Nebula overlay -->
+  <div class="nebula"></div>
 
-  <div class="max-w-[820px] relative z-10">
-    <div class="reveal mb-10">
+  <div class="max-w-[820px] relative z-10 hero-fade" id="heroContent">
+    <div class="reveal mb-8">
       <img src="https://logo.clearbit.com/tuenkers.de" alt="" class="h-10 rounded-lg opacity-90 drop-shadow-lg" onerror="this.style.display='none'">
     </div>
 
@@ -110,15 +129,15 @@ body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opa
     </h1>
 
     <p class="reveal d2 text-[18px] text-white/60 max-w-[460px] leading-relaxed mb-10 drop-shadow-[0_1px_10px_rgba(0,0,0,0.5)]">
-      TÜNKERS entwickelt und fertigt pneumatische Spann- und Fördertechnik für anspruchsvolle Industrieprozesse. Zuverlässig, robust, auf den Punkt.
+      
     </p>
 
     <div class="reveal d3 flex flex-col sm:flex-row gap-3">
-      <a href="#kontakt" class="glow-btn inline-flex items-center gap-2 bg-[#6366f1] text-white px-8 py-4 rounded-2xl text-[15px] font-semibold tracking-[-0.01em]">
+      <a href="#kontakt" class="shimmer-btn inline-flex items-center gap-2.5 bg-[#6366f1] text-white px-8 py-4 rounded-2xl text-[15px] font-semibold tracking-[-0.01em]">
         Kostenlos besprechen
         <span class="text-lg">&#8599;</span>
       </a>
-      <a href="#leistungen" class="inline-flex items-center text-white/40 px-6 py-4 rounded-2xl text-[15px] border border-white/[0.1] hover:text-white/70 hover:border-white/[0.2] hover:bg-white/[0.05] backdrop-blur-sm transition-all duration-300">
+      <a href="#leistungen" class="inline-flex items-center text-white/40 px-6 py-4 rounded-2xl text-[15px] border border-white/[0.08] hover:text-white/70 hover:border-white/[0.15] hover:bg-white/[0.04] backdrop-blur-sm transition-all duration-300">
         Was steckt dahinter
       </a>
     </div>
@@ -128,12 +147,12 @@ body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opa
 <!-- ══════ SERVICES MARQUEE ══════ -->
 <div class="border-y border-white/[0.04] py-5 mb-24 overflow-hidden">
   <div class="mq-track">
-    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Pneumatische Spanntechnik</span>
-    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Fördertechnik</span>
-    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Sondermaschinenbau</span>
-    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Pneumatische Spanntechnik</span>
-    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Fördertechnik</span>
-    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Sondermaschinenbau</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">TÜNKERS Maschinenbau GmbH</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">TÜNKERS Maschinenbau GmbH</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">TÜNKERS Maschinenbau GmbH</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">TÜNKERS Maschinenbau GmbH</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">TÜNKERS Maschinenbau GmbH</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">TÜNKERS Maschinenbau GmbH</span>
   </div>
 </div>
 
@@ -141,22 +160,6 @@ body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opa
 <div class="px-6 md:px-16 max-w-[1100px] mx-auto mb-28">
   <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.04] rounded-3xl overflow-hidden">
     
-    <div class="bg-[#111] p-8 text-center hover:bg-[#151515] transition-colors duration-300">
-      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="60" data-suffix="+">0+</span></div>
-      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Jahre Erfahrung</div>
-    </div>
-    <div class="bg-[#111] p-8 text-center hover:bg-[#151515] transition-colors duration-300">
-      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="1" data-suffix=".000+">0.000+</span></div>
-      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Kundenprojekte</div>
-    </div>
-    <div class="bg-[#111] p-8 text-center hover:bg-[#151515] transition-colors duration-300">
-      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="200" data-suffix="+">0+</span></div>
-      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Mitarbeiter</div>
-    </div>
-    <div class="bg-[#111] p-8 text-center hover:bg-[#151515] transition-colors duration-300">
-      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="100" data-suffix="%">0%</span></div>
-      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Made in Germany</div>
-    </div>
   </div>
 </div>
 
@@ -164,34 +167,16 @@ body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opa
 <section class="px-6 md:px-16 max-w-[1100px] mx-auto pb-32" id="leistungen">
   <div class="reveal text-[11px] font-medium tracking-[0.14em] uppercase text-[#6366f1] mb-4">Leistungen</div>
   <h2 class="reveal d1 font-serif text-[clamp(28px,4vw,48px)] font-semibold tracking-[-0.03em] leading-[1.1] mb-5 max-w-[520px]">Unsere Leistungen</h2>
-  <p class="reveal d2 text-[16px] text-white/35 max-w-[440px] leading-relaxed mb-16">Von der Komponente bis zur Systemlösung – wir liefern Maschinenbau-Technik, die in realen Produktionsumgebungen besteht.</p>
+  <p class="reveal d2 text-[16px] text-white/35 max-w-[440px] leading-relaxed mb-16"></p>
   <div class="grid md:grid-cols-3 gap-4">
     
-    <div class="reveal delay-1 group bg-[#141414] rounded-2xl p-8 border border-white/[0.04] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] transition-all duration-500 relative overflow-hidden">
-      <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-      <div class="font-serif text-[40px] font-light text-white/[0.06] leading-none mb-5 tracking-tight">01</div>
-      <h3 class="text-[17px] font-semibold tracking-[-0.02em] mb-2 relative">Pneumatische Spanntechnik</h3>
-      <p class="text-[14px] text-white/40 leading-relaxed relative">Hochbelastbare Spannzylinder und Kniehebel-Spannvorrichtungen für die automatisierte Fertigung. Ausgelegt für kurze Taktzeiten und hohe Wiederholgenauigkeit.</p>
-    </div>
-    <div class="reveal delay-2 group bg-[#141414] rounded-2xl p-8 border border-white/[0.04] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] transition-all duration-500 relative overflow-hidden">
-      <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-      <div class="font-serif text-[40px] font-light text-white/[0.06] leading-none mb-5 tracking-tight">02</div>
-      <h3 class="text-[17px] font-semibold tracking-[-0.02em] mb-2 relative">Fördertechnik</h3>
-      <p class="text-[14px] text-white/40 leading-relaxed relative">Pneumatische Hubeinheiten, Drehtische und Transportsysteme für den Werkstückfluss in der Linie. Kompakt, wartungsarm, dauerhaft belastbar.</p>
-    </div>
-    <div class="reveal delay-3 group bg-[#141414] rounded-2xl p-8 border border-white/[0.04] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] transition-all duration-500 relative overflow-hidden">
-      <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-      <div class="font-serif text-[40px] font-light text-white/[0.06] leading-none mb-5 tracking-tight">03</div>
-      <h3 class="text-[17px] font-semibold tracking-[-0.02em] mb-2 relative">Sondermaschinenbau</h3>
-      <p class="text-[14px] text-white/40 leading-relaxed relative">Kundenspezifische Lösungen für komplexe Fertigungsaufgaben. Wir entwickeln von der Anforderung bis zur einsatzbereiten Einheit.</p>
-    </div>
   </div>
 </section>
 
 <!-- ══════ PROJEKTE (Echte Bilder) ══════ -->
 <section class="px-6 md:px-16 max-w-[1100px] mx-auto pb-32" id="projekte">
   <div class="reveal text-[11px] font-medium tracking-[0.14em] uppercase text-[#6366f1] mb-4">Projekte</div>
-  <h2 class="reveal d1 font-serif text-[clamp(28px,4vw,48px)] font-semibold tracking-[-0.03em] leading-[1.1] mb-16">Ausgewählte Projekte</h2>
+  <h2 class="reveal d1 font-serif text-[clamp(28px,4vw,48px)] font-semibold tracking-[-0.03em] leading-[1.1] mb-16">Unsere Projekte</h2>
   <div class="grid md:grid-cols-[1.3fr_0.7fr] grid-rows-[280px_280px] gap-3">
     
     <div class="clip-reveal md:row-span-2 rounded-2xl overflow-hidden relative group cursor-pointer">
@@ -223,8 +208,8 @@ body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opa
   <div class="reveal relative bg-[#111] rounded-[28px] p-12 md:p-20 text-center overflow-hidden border border-white/[0.03]">
     <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-[#6366f1] opacity-[0.05] rounded-full blur-[80px] pointer-events-none"></div>
     <h2 class="font-serif text-[clamp(26px,3.5vw,42px)] font-semibold tracking-[-0.03em] leading-[1.12] mb-4 relative">Bereit für den nächsten Schritt?</h2>
-    <p class="text-[16px] text-white/35 max-w-[400px] mx-auto mb-10 leading-relaxed relative">Sprechen Sie mit unseren Ingenieuren über Ihre Fertigungsaufgabe. Wir analysieren Ihre Anforderungen und entwickeln eine passgenaue Lösung.</p>
-    <a href="mailto:info@tuenkers.de" class="glow-btn inline-flex items-center gap-2 bg-[#6366f1] text-white px-9 py-4 rounded-2xl text-[15px] font-semibold relative">
+    <p class="text-[16px] text-white/35 max-w-[400px] mx-auto mb-10 leading-relaxed relative">Lassen Sie uns gemeinsam Ihr Projekt besprechen.</p>
+    <a href="mailto:info@tuenkers.de" class="shimmer-btn inline-flex items-center gap-2.5 bg-[#6366f1] text-white px-9 py-4 rounded-2xl text-[15px] font-semibold relative">
       Jetzt Kontakt aufnehmen <span class="text-lg">&#8599;</span>
     </a>
   </div>
@@ -237,7 +222,7 @@ body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opa
 
 <!-- Sticky CTA (erscheint nach Scroll) -->
 <div class="sticky-cta" id="stickyCta">
-  <a href="#kontakt" class="glow-btn inline-flex items-center gap-2 bg-[#6366f1] text-white px-6 py-3 rounded-2xl text-[14px] font-semibold shadow-2xl">
+  <a href="#kontakt" class="shimmer-btn inline-flex items-center gap-2 bg-[#6366f1] text-white px-6 py-3 rounded-2xl text-[14px] font-semibold shadow-2xl">
     Kontakt aufnehmen <span>&#8599;</span>
   </a>
 </div>
@@ -280,10 +265,23 @@ window.addEventListener('scroll',()=>{
 // Smooth anchors
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}}));
 
-// Parallax hero background
+// Parallax hero background + hero content fade on scroll
 const heroBg=document.getElementById('heroBg');
+const heroContent=document.getElementById('heroContent');
 if(heroBg&&window.innerWidth>768){
-  window.addEventListener('scroll',()=>{const s=window.scrollY;if(s<window.innerHeight){heroBg.style.transform=`scale(1.05) translateY(${s*0.3}px)`}},{passive:true});
+  window.addEventListener('scroll',()=>{
+    const s=window.scrollY;
+    const vh=window.innerHeight;
+    if(s<vh){
+      heroBg.style.transform=`scale(1.05) translateY(${s*0.3}px)`;
+      // Hero content fades + slides up as you scroll
+      const progress=Math.min(s/vh,1);
+      if(heroContent){
+        heroContent.style.opacity=1-progress*1.5;
+        heroContent.style.transform=`translateY(${-s*0.15}px)`;
+      }
+    }
+  },{passive:true});
 }
 
 // Mouse spotlight (follows cursor)
