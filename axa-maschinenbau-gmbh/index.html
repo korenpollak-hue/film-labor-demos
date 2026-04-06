@@ -3,173 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AXA Maschinenbau GmbH — Präzision. Technik. Ergebnis.</title>
-<meta name="description" content="AXA Maschinenbau GmbH — Konstruktion, Fertigung und Service für Industriemaschinen und Sonderanlagen. Made in Germany.">
+<title>Ein Entwurf fuer AXA Maschinenbau GmbH</title>
+<meta name="description" content="AXA Maschinenbau GmbH – Ihr Partner für Sondermaschinenbau, Konstruktion, Fertigung und Service. Präzision und Qualität aus einer Hand.">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
 <script>
-tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: { sans: ['Outfit', 'system-ui'], serif: ['Fraunces', 'Georgia'] },
-      colors: { brand: { DEFAULT: '#6366f1', light: '#e0e7ff' } },
-      letterSpacing: { tighter: '-0.04em', tight: '-0.03em' },
-    }
-  }
-}
+tailwind.config={theme:{extend:{fontFamily:{sans:['Outfit','system-ui'],serif:['Fraunces','Georgia']}}}}
 </script>
 <style>
-  body { -webkit-font-smoothing: antialiased; }
+body{-webkit-font-smoothing:antialiased}
 
-  /* Film grain */
-  body::after {
-    content: ''; position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0.02;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-size: 128px;
-  }
+/* Film grain */
+body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.02;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:128px}
 
-  /* Staggered reveal */
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  .delay-1 { transition-delay: 0.08s; }
-  .delay-2 { transition-delay: 0.16s; }
-  .delay-3 { transition-delay: 0.24s; }
-  .delay-4 { transition-delay: 0.32s; }
+/* Aurora background */
+.aurora{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.aurora-orb{position:absolute;border-radius:50%;filter:blur(100px);animation:float 12s ease-in-out infinite alternate}
+.aurora-orb:nth-child(1){width:500px;height:500px;top:-10%;right:-5%;background:#6366f1;opacity:.06}
+.aurora-orb:nth-child(2){width:400px;height:400px;bottom:-15%;left:-10%;background:#6366f1;opacity:.04;animation-delay:-4s;animation-duration:16s}
+.aurora-orb:nth-child(3){width:300px;height:300px;top:40%;left:50%;background:#6366f1;opacity:.03;animation-delay:-8s;animation-duration:20s}
+@keyframes float{0%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.1)}100%{transform:translate(-20px,30px) scale(0.95)}}
 
-  /* 3D tilt */
-  .tilt-frame { perspective: 1200px; }
-  .tilt-frame img { transition: transform 0.5s cubic-bezier(0.32,0.72,0,1); will-change: transform; }
+/* Gradient text */
+.gradient-text{background:linear-gradient(135deg,#6366f1,#fff 60%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
-  /* Marquee */
-  .marquee-track { display: flex; gap: 48px; animation: scroll 25s linear infinite; width: max-content; }
-  @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+/* Glow button */
+.glow-btn{position:relative;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s}
+.glow-btn:hover{transform:translateY(-2px);box-shadow:0 0 24px #6366f144,0 0 64px #6366f122}
+.glow-btn:active{transform:translateY(0) scale(.98)}
 
-  /* Smooth scroll */
-  html { scroll-behavior: smooth; }
+/* Staggered reveal */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.reveal.v{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 
-  @media (prefers-reduced-motion: reduce) {
-    .reveal { opacity: 1; transform: none; transition: none; }
-    .marquee-track { animation: none; }
-  }
+/* Counter animation */
+.counter{display:inline-block;font-variant-numeric:tabular-nums}
+
+/* Marquee */
+.mq-track{display:flex;gap:48px;animation:mq 25s linear infinite;width:max-content}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* Sticky CTA */
+.sticky-cta{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);opacity:0;z-index:90;transition:all .5s cubic-bezier(.16,1,.3,1)}
+.sticky-cta.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* 3D Tilt */
+.tilt{perspective:1200px}
+.tilt img{transition:transform .5s cubic-bezier(.32,.72,0,1);will-change:transform}
+
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.mq-track{animation:none}.aurora-orb{animation:none}}
 </style>
 </head>
 <body class="bg-[#0a0a0a] text-[#fafaf9] font-sans overflow-x-hidden">
 
-<!-- ══════ NAV (Floating Glass Pill) ══════ -->
-<nav class="fixed top-5 left-1/2 -translate-x-1/2 z-[100] bg-black/50 backdrop-blur-2xl border border-white/[0.06] rounded-full px-5 py-2.5 flex items-center gap-6 transition-all duration-500">
-  <a href="#" class="flex items-center gap-2.5 no-underline">
-    <img src="https://logo.clearbit.com/axa-maschinenbau.de" alt="" class="h-6 w-6 rounded" onerror="this.style.display='none'">
-    <span class="text-[15px] font-semibold tracking-[-0.02em] text-white/90">AXA Maschinenbau GmbH</span>
-  </a>
-  <div class="hidden md:flex items-center gap-1">
-    <a href="#leistungen" class="text-[14px] text-white/50 hover:text-white/90 px-3.5 py-2 rounded-full hover:bg-white/[0.06] transition-all duration-300">Leistungen</a>
-    <a href="#projekte" class="text-[14px] text-white/50 hover:text-white/90 px-3.5 py-2 rounded-full hover:bg-white/[0.06] transition-all duration-300">Projekte</a>
-    <a href="#kontakt" class="text-[14px] font-medium text-[#0a0a0a] bg-white px-5 py-2 rounded-full hover:scale-[1.03] active:scale-[0.98] transition-all duration-300">Kontakt</a>
-  </div>
-</nav>
+<!-- Aurora Background -->
+<div class="aurora"><div class="aurora-orb"></div><div class="aurora-orb"></div><div class="aurora-orb"></div></div>
 
-<!-- ══════ HERO ══════ -->
-<section class="min-h-dvh flex flex-col justify-center px-6 md:px-12 lg:px-16 pt-32 pb-20 relative overflow-hidden">
-  <!-- Accent glow -->
-  <div class="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] bg-brand/[0.07] rounded-full blur-[100px] pointer-events-none"></div>
-  <div class="absolute -bottom-[30%] -left-[15%] w-[400px] h-[400px] bg-brand/[0.04] rounded-full blur-[120px] pointer-events-none"></div>
+<!-- KEIN NAVBAR (Tunnel Vision = 2x Conversion) -->
 
-  <div class="max-w-[880px] relative z-10">
-    <div class="reveal text-[11px] font-medium tracking-[0.12em] uppercase text-brand flex items-center gap-2 mb-7">
-      <span class="w-6 h-px bg-brand"></span>Maschinenbau
+<!-- ══════ HERO: Persoenlich ══════ -->
+<section class="min-h-dvh flex flex-col justify-center px-6 md:px-16 pt-16 pb-20 relative">
+  <div class="max-w-[820px] relative z-10">
+
+    <!-- Firmenlogo via Clearbit -->
+    <div class="reveal mb-10">
+      <img src="https://logo.clearbit.com/axa-maschinenbau.de" alt="" class="h-10 rounded-lg opacity-80" onerror="this.style.display='none'">
     </div>
-    <h1 class="reveal delay-1 font-serif text-[clamp(42px,7vw,86px)] font-bold tracking-tighter leading-[0.98] mb-7">Maschinen, die <em>wirklich</em> funktionieren</h1>
-    <p class="reveal delay-2 text-[18px] text-white/50 max-w-[480px] leading-relaxed mb-10">AXA Maschinenbau GmbH entwickelt und fertigt Maschinen und Anlagen für anspruchsvolle Industrieprozesse. Vom Einzelteil bis zur Serienanlage — made in Germany.</p>
-    <div class="reveal delay-3 flex gap-3 flex-wrap">
-      <a href="#kontakt" class="group inline-flex items-center gap-2.5 bg-white text-[#0a0a0a] px-7 py-4 rounded-full text-[15px] font-medium hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)] active:scale-[0.98] transition-all duration-400">
-        Kontakt aufnehmen
-        <span class="w-6 h-6 bg-black/10 rounded-full flex items-center justify-center text-xs group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-300">&#8599;</span>
+
+    <h1 class="reveal d1 font-serif text-[clamp(36px,6vw,72px)] font-bold tracking-[-0.04em] leading-[0.98] mb-6">
+      Ein <em class="gradient-text italic">Entwurf</em><br>fuer AXA Maschinenbau GmbH
+    </h1>
+
+    <p class="reveal d2 text-[18px] text-white/40 max-w-[460px] leading-relaxed mb-10">
+      AXA Maschinenbau GmbH entwickelt und fertigt technisch anspruchsvolle Maschinen und Anlagen für den industriellen Einsatz. Qualität, die hält.
+    </p>
+
+    <div class="reveal d3 flex flex-col sm:flex-row gap-3">
+      <a href="#kontakt" class="glow-btn inline-flex items-center gap-2 bg-[#6366f1] text-white px-8 py-4 rounded-2xl text-[15px] font-semibold tracking-[-0.01em]">
+        Kostenlos besprechen
+        <span class="text-lg">&#8599;</span>
       </a>
-      <a href="#leistungen" class="inline-flex items-center text-white/40 border border-white/[0.08] px-6 py-4 rounded-full text-[15px] hover:text-white/70 hover:border-white/[0.15] hover:bg-white/[0.03] transition-all duration-300">Leistungen</a>
+      <a href="#leistungen" class="inline-flex items-center text-white/30 px-6 py-4 rounded-2xl text-[15px] border border-white/[0.06] hover:text-white/60 hover:border-white/[0.12] transition-all duration-300">
+        Was steckt dahinter
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ══════ HERO IMAGE (3D Tilt) ══════ -->
-<div class="px-6 md:px-12 lg:px-16 pb-24 max-w-[1200px] mx-auto">
-  <div class="tilt-frame reveal rounded-2xl overflow-hidden relative" id="tiltFrame">
-    <img src="https://www.axa-maschinenbau.de/fileadmin/axa-maschinenbau/header/Header-Startseite_VSR-SmartVu.png" alt="AXA Maschinenbau GmbH" class="w-full aspect-video object-cover">
-    <div class="absolute inset-0 rounded-2xl shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] pointer-events-none"></div>
-    <div class="absolute inset-0 bg-gradient-to-br from-white/[0.06] to-transparent pointer-events-none transition-opacity" id="tiltReflection"></div>
+<!-- ══════ HERO IMAGE (3D Tilt + echte Firma) ══════ -->
+<div class="px-6 md:px-16 pb-28 max-w-[1100px] mx-auto">
+  <div class="tilt reveal rounded-3xl overflow-hidden relative" id="tiltFrame">
+    <img src="https://www.axa-maschinenbau.de/fileadmin/axa-maschinenbau/header/Header-Startseite_VSR-SmartVu.png" alt="AXA Maschinenbau GmbH" class="w-full aspect-[16/9] object-cover">
+    <div class="absolute inset-0 rounded-3xl shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-transparent pointer-events-none" id="tiltRef"></div>
   </div>
 </div>
 
-<!-- ══════ MARQUEE ══════ -->
-<div class="border-y border-white/[0.06] py-6 mb-20 overflow-hidden">
-  <div class="marquee-track">
-    <span class="font-serif text-[42px] md:text-[52px] font-light tracking-tight text-white/[0.06] italic whitespace-nowrap">Konstruktion & Entwicklung &mdash;</span>
-    <span class="font-serif text-[42px] md:text-[52px] font-light tracking-tight text-white/[0.06] italic whitespace-nowrap">Fertigung & Montage &mdash;</span>
-    <span class="font-serif text-[42px] md:text-[52px] font-light tracking-tight text-white/[0.06] italic whitespace-nowrap">Service & Instandhaltung &mdash;</span>
-    <span class="font-serif text-[42px] md:text-[52px] font-light tracking-tight text-white/[0.06] italic whitespace-nowrap">Konstruktion & Entwicklung &mdash;</span>
-    <span class="font-serif text-[42px] md:text-[52px] font-light tracking-tight text-white/[0.06] italic whitespace-nowrap">Fertigung & Montage &mdash;</span>
-    <span class="font-serif text-[42px] md:text-[52px] font-light tracking-tight text-white/[0.06] italic whitespace-nowrap">Service & Instandhaltung &mdash;</span>
+<!-- ══════ SERVICES MARQUEE ══════ -->
+<div class="border-y border-white/[0.04] py-5 mb-24 overflow-hidden">
+  <div class="mq-track">
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Konstruktion & Entwicklung</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Fertigung & Montage</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Service & Wartung</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Konstruktion & Entwicklung</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Fertigung & Montage</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Service & Wartung</span>
   </div>
 </div>
 
-<!-- ══════ STATS ══════ -->
-<div class="px-6 md:px-12 lg:px-16 max-w-[1200px] mx-auto mb-24">
-  <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.06] rounded-2xl overflow-hidden">
+<!-- ══════ STATS (Animated Counters) ══════ -->
+<div class="px-6 md:px-16 max-w-[1100px] mx-auto mb-28">
+  <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.04] rounded-3xl overflow-hidden">
     
-    <div class="bg-[#141414] p-8 text-center hover:bg-[#1a1a1a] transition-colors duration-300">
-      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none">25+</div>
-      <div class="text-[13px] text-white/30 mt-2 tracking-wide">Jahre Erfahrung</div>
+    <div class="bg-[#111] p-8 text-center hover:bg-[#151515] transition-colors duration-300">
+      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="20" data-suffix="+">0+</span></div>
+      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Jahre Erfahrung</div>
     </div>
-    <div class="bg-[#141414] p-8 text-center hover:bg-[#1a1a1a] transition-colors duration-300">
-      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none">400+</div>
-      <div class="text-[13px] text-white/30 mt-2 tracking-wide">realisierte Projekte</div>
+    <div class="bg-[#111] p-8 text-center hover:bg-[#151515] transition-colors duration-300">
+      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="500" data-suffix="+">0+</span></div>
+      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Projekte realisiert</div>
     </div>
-    <div class="bg-[#141414] p-8 text-center hover:bg-[#1a1a1a] transition-colors duration-300">
-      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none">60+</div>
-      <div class="text-[13px] text-white/30 mt-2 tracking-wide">Mitarbeiter</div>
+    <div class="bg-[#111] p-8 text-center hover:bg-[#151515] transition-colors duration-300">
+      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="50" data-suffix="+">0+</span></div>
+      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Mitarbeiter</div>
     </div>
-    <div class="bg-[#141414] p-8 text-center hover:bg-[#1a1a1a] transition-colors duration-300">
-      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none">100%</div>
-      <div class="text-[13px] text-white/30 mt-2 tracking-wide">Qualitätsprüfung</div>
+    <div class="bg-[#111] p-8 text-center hover:bg-[#151515] transition-colors duration-300">
+      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="100" data-suffix="%">0%</span></div>
+      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Eigenentwicklung</div>
     </div>
   </div>
 </div>
 
-<!-- ══════ SERVICES ══════ -->
-<section class="px-6 md:px-12 lg:px-16 max-w-[1200px] mx-auto pb-28" id="leistungen">
-  <div class="reveal text-[11px] font-medium tracking-[0.12em] uppercase text-brand mb-4">Leistungen</div>
-  <h2 class="reveal delay-1 font-serif text-[clamp(30px,4vw,50px)] font-semibold tracking-tight leading-[1.1] mb-5 max-w-[560px]">Unsere Leistungen</h2>
-  <p class="reveal delay-2 text-[16px] text-white/40 max-w-[460px] leading-relaxed mb-14">Von der Konstruktion über die Fertigung bis zur Wartung — wir begleiten Ihre Anlage durch den gesamten Lebenszyklus.</p>
+<!-- ══════ LEISTUNGEN ══════ -->
+<section class="px-6 md:px-16 max-w-[1100px] mx-auto pb-32" id="leistungen">
+  <div class="reveal text-[11px] font-medium tracking-[0.14em] uppercase text-[#6366f1] mb-4">Leistungen</div>
+  <h2 class="reveal d1 font-serif text-[clamp(28px,4vw,48px)] font-semibold tracking-[-0.03em] leading-[1.1] mb-5 max-w-[520px]">Unsere Leistungen</h2>
+  <p class="reveal d2 text-[16px] text-white/35 max-w-[440px] leading-relaxed mb-16">Von der Konstruktion bis zur Inbetriebnahme bieten wir das vollständige Spektrum des Maschinenbaus.</p>
   <div class="grid md:grid-cols-3 gap-4">
     
     <div class="reveal delay-1 group bg-[#141414] rounded-2xl p-8 border border-white/[0.04] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] transition-all duration-500 relative overflow-hidden">
       <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
       <div class="font-serif text-[40px] font-light text-white/[0.06] leading-none mb-5 tracking-tight">01</div>
       <h3 class="text-[17px] font-semibold tracking-[-0.02em] mb-2 relative">Konstruktion & Entwicklung</h3>
-      <p class="text-[14px] text-white/40 leading-relaxed relative">Wir entwickeln maßgeschneiderte Maschinenlösungen auf Basis Ihrer Anforderungen. Modernste CAD-Systeme und jahrelange Konstruktionserfahrung sichern Qualität von Anfang an.</p>
+      <p class="text-[14px] text-white/40 leading-relaxed relative">Wir entwickeln maßgeschneiderte Maschinen und Anlagen nach Kundenspezifikation. Vom ersten Entwurf bis zum fertigen Bauplan.</p>
     </div>
     <div class="reveal delay-2 group bg-[#141414] rounded-2xl p-8 border border-white/[0.04] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] transition-all duration-500 relative overflow-hidden">
       <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
       <div class="font-serif text-[40px] font-light text-white/[0.06] leading-none mb-5 tracking-tight">02</div>
       <h3 class="text-[17px] font-semibold tracking-[-0.02em] mb-2 relative">Fertigung & Montage</h3>
-      <p class="text-[14px] text-white/40 leading-relaxed relative">Unsere Werkstätten verfügen über CNC-Bearbeitung, Schweißtechnik und Montageplätze für komplexe Baugruppen. Höchste Maßhaltigkeit ist für uns Standard, nicht Option.</p>
+      <p class="text-[14px] text-white/40 leading-relaxed relative">Präzisionsfertigung in eigenen Werkstätten mit modernem Maschinenpark. Sorgfältige Montage und Qualitätskontrolle nach höchsten Standards.</p>
     </div>
     <div class="reveal delay-3 group bg-[#141414] rounded-2xl p-8 border border-white/[0.04] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] transition-all duration-500 relative overflow-hidden">
       <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
       <div class="font-serif text-[40px] font-light text-white/[0.06] leading-none mb-5 tracking-tight">03</div>
-      <h3 class="text-[17px] font-semibold tracking-[-0.02em] mb-2 relative">Service & Instandhaltung</h3>
-      <p class="text-[14px] text-white/40 leading-relaxed relative">Schnelle Reaktionszeiten, Ersatzteilversorgung und vorbeugende Wartung halten Ihre Anlage dauerhaft im Betrieb. Unser Serviceteam ist direkt erreichbar — ohne Umwege.</p>
+      <h3 class="text-[17px] font-semibold tracking-[-0.02em] mb-2 relative">Service & Wartung</h3>
+      <p class="text-[14px] text-white/40 leading-relaxed relative">Regelmäßige Wartung, schnelle Ersatzteilverfügbarkeit und kompetenter Service für den störungsfreien Betrieb Ihrer Anlage.</p>
     </div>
   </div>
 </section>
 
-<!-- ══════ PORTFOLIO ══════ -->
-<section class="px-6 md:px-12 lg:px-16 max-w-[1200px] mx-auto pb-28" id="projekte">
-  <div class="reveal text-[11px] font-medium tracking-[0.12em] uppercase text-brand mb-4">Projekte</div>
-  <h2 class="reveal delay-1 font-serif text-[clamp(30px,4vw,50px)] font-semibold tracking-tight leading-[1.1] mb-5">Ausgewählte Projekte</h2>
-  <p class="reveal delay-2 text-[16px] text-white/40 max-w-[460px] leading-relaxed mb-14">Ein Auszug aus unseren realisierten Anlagen und Maschinensystemen für die Industrie.</p>
-  <div class="grid md:grid-cols-[1.3fr_0.7fr] grid-rows-[280px_280px] gap-4">
+<!-- ══════ PROJEKTE (Echte Bilder) ══════ -->
+<section class="px-6 md:px-16 max-w-[1100px] mx-auto pb-32" id="projekte">
+  <div class="reveal text-[11px] font-medium tracking-[0.14em] uppercase text-[#6366f1] mb-4">Projekte</div>
+  <h2 class="reveal d1 font-serif text-[clamp(28px,4vw,48px)] font-semibold tracking-[-0.03em] leading-[1.1] mb-16">Ausgewählte Projekte</h2>
+  <div class="grid md:grid-cols-[1.3fr_0.7fr] grid-rows-[280px_280px] gap-3">
     
     <div class="reveal delay-1 md:row-span-2 rounded-2xl overflow-hidden relative group cursor-pointer">
       <img src="https://www.axa-maschinenbau.de/fileadmin/axa-maschinenbau/header/neu/Header-Startseite_Luftaufnahme.png" alt="AXA Maschinenbau GmbH" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105 brightness-[0.85] saturate-[0.9] group-hover:brightness-100 group-hover:saturate-100">
@@ -195,59 +195,67 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- ══════ CTA ══════ -->
-<section class="px-6 md:px-12 lg:px-16 max-w-[1200px] mx-auto pb-28" id="kontakt">
-  <div class="reveal bg-[#141414] rounded-3xl p-12 md:p-20 text-center relative overflow-hidden border border-white/[0.04]">
-    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[360px] h-[360px] bg-brand/[0.06] rounded-full blur-[80px] pointer-events-none"></div>
-    <h2 class="font-serif text-[clamp(28px,4vw,44px)] font-semibold tracking-tight leading-[1.12] mb-4 relative">Bereit für den nächsten Schritt?</h2>
-    <p class="text-[16px] text-white/40 max-w-[420px] mx-auto mb-9 leading-relaxed relative">Sprechen Sie mit unseren Ingenieuren über Ihre Anforderungen. Wir analysieren Ihre Aufgabenstellung und unterbreiten Ihnen ein konkretes Angebot.</p>
-    <a href="mailto:info@axa-maschinenbau.de" class="group relative inline-flex items-center gap-2.5 bg-white text-[#0a0a0a] px-8 py-4 rounded-full text-[15px] font-semibold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(255,255,255,0.15)] active:scale-[0.98] transition-all duration-400">
-      Jetzt Kontakt aufnehmen
-      <span class="text-lg group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform">&#8599;</span>
+<!-- ══════ CTA (Embedded Calendar Ready) ══════ -->
+<section class="px-6 md:px-16 max-w-[1100px] mx-auto pb-28" id="kontakt">
+  <div class="reveal relative bg-[#111] rounded-[28px] p-12 md:p-20 text-center overflow-hidden border border-white/[0.03]">
+    <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-[#6366f1] opacity-[0.05] rounded-full blur-[80px] pointer-events-none"></div>
+    <h2 class="font-serif text-[clamp(26px,3.5vw,42px)] font-semibold tracking-[-0.03em] leading-[1.12] mb-4 relative">Bereit für den nächsten Schritt?</h2>
+    <p class="text-[16px] text-white/35 max-w-[400px] mx-auto mb-10 leading-relaxed relative">Sprechen Sie mit unseren Ingenieuren über Ihr Vorhaben. Wir analysieren Ihre Anforderungen und entwickeln die passende technische Lösung.</p>
+    <a href="mailto:info@axa-maschinenbau.de" class="glow-btn inline-flex items-center gap-2 bg-[#6366f1] text-white px-9 py-4 rounded-2xl text-[15px] font-semibold relative">
+      Jetzt Kontakt aufnehmen <span class="text-lg">&#8599;</span>
     </a>
   </div>
 </section>
 
-<!-- ══════ FOOTER ══════ -->
-<footer class="px-6 md:px-12 lg:px-16 max-w-[1200px] mx-auto border-t border-white/[0.06] py-10 flex flex-col md:flex-row justify-between items-center gap-4">
-  <div class="text-[14px] text-white/20"><span class="text-white/40 font-medium">AXA Maschinenbau GmbH</span> &mdash; Präzision. Technik. Ergebnis.</div>
-  <div class="flex gap-6">
-    <a href="#leistungen" class="text-[13px] text-white/20 hover:text-white/40 transition-colors">Leistungen</a>
-    <a href="#projekte" class="text-[13px] text-white/20 hover:text-white/40 transition-colors">Projekte</a>
-    <a href="#kontakt" class="text-[13px] text-white/20 hover:text-white/40 transition-colors">Kontakt</a>
-  </div>
+<!-- ══════ FOOTER (Minimal) ══════ -->
+<footer class="text-center py-10 text-[12px] text-white/10 tracking-[0.04em] border-t border-white/[0.03]">
+  Website-Entwurf von Film-labor -- Filmproduktion & Digitale Medien
 </footer>
-<div class="text-center py-6 text-[11px] text-white/10 tracking-[0.04em] border-t border-white/[0.03]">
-  Website-Entwurf von Film-labor &mdash; Filmproduktion & Digitale Medien
+
+<!-- Sticky CTA (erscheint nach Scroll) -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="#kontakt" class="glow-btn inline-flex items-center gap-2 bg-[#6366f1] text-white px-6 py-3 rounded-2xl text-[14px] font-semibold shadow-2xl">
+    Kontakt aufnehmen <span>&#8599;</span>
+  </a>
 </div>
 
 <script>
 // Reveal
-const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }), { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');obs.unobserve(e.target)}}),{threshold:.06,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 // 3D Tilt
-const f = document.getElementById('tiltFrame');
-if (f && window.innerWidth > 768) {
-  f.addEventListener('mousemove', e => {
-    const r = f.getBoundingClientRect(), x = (e.clientX-r.left)/r.width-0.5, y = (e.clientY-r.top)/r.height-0.5;
-    f.querySelector('img').style.transform = `scale(1.02) rotateY(${x*8}deg) rotateX(${-y*5}deg)`;
-    document.getElementById('tiltReflection').style.background = `radial-gradient(circle at ${(x+.5)*100}% ${(y+.5)*100}%, rgba(255,255,255,0.1) 0%, transparent 60%)`;
-  });
-  f.addEventListener('mouseleave', () => { f.querySelector('img').style.transform = ''; });
+const f=document.getElementById('tiltFrame');
+if(f&&window.innerWidth>768){
+  f.addEventListener('mousemove',e=>{const r=f.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    f.querySelector('img').style.transform=`scale(1.02) rotateY(${x*8}deg) rotateX(${-y*5}deg)`;
+    document.getElementById('tiltRef').style.background=`radial-gradient(circle at ${(x+.5)*100}% ${(y+.5)*100}%,rgba(255,255,255,.1)0%,transparent 60%)`});
+  f.addEventListener('mouseleave',()=>{f.querySelector('img').style.transform=''});
 }
 
-// Smooth anchors
-document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
-  const t = document.querySelector(a.getAttribute('href'));
-  if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
-}));
+// Animated counters
+document.querySelectorAll('[data-count]').forEach(el=>{
+  const target=parseFloat(el.dataset.count);
+  const suffix=el.dataset.suffix||'';
+  let started=false;
+  new IntersectionObserver(([e])=>{
+    if(e.isIntersecting&&!started){started=true;
+      const dur=1400;const start=performance.now();
+      (function step(now){const p=Math.min((now-start)/dur,1);const ease=1-Math.pow(1-p,3);
+        el.textContent=Math.floor(target*ease)+suffix;
+        if(p<1)requestAnimationFrame(step)})(start)}
+  },{threshold:.5}).observe(el)});
 
-// Parallax glows
-window.addEventListener('scroll', () => {
-  const s = window.scrollY;
-  document.querySelectorAll('[class*="bg-brand"]').forEach((g,i) => { if(g.classList.contains('blur-[100px]') || g.classList.contains('blur-[120px]')) g.style.transform = `translateY(${s*(0.1+i*0.05)}px)`; });
-}, { passive: true });
+// Sticky CTA on scroll
+const sticky=document.getElementById('stickyCta');
+let lastY=0;
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  sticky.classList.toggle('show',y>600&&y<document.body.scrollHeight-1200);
+  lastY=y},{passive:true});
+
+// Smooth anchors
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}}));
 </script>
 </body>
 </html>
