@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ein Entwurf fuer MB Lauterbach Metallbau GmbH</title>
-<meta name="description" content="MB Lauterbach Metallbau GmbH — Stahl- und Metallkonstruktionen, Maschinenbauteile und Schweißkonstruktionen. Präzision aus einer Hand.">
+<meta name="description" content="MB Lauterbach Metallbau GmbH — Ihr Spezialist für Stahlbau, Schweißtechnik und Sonderanfertigungen. Präzise Metallverarbeitung aus einer Hand.">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,21 +64,26 @@ body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opa
 
 <!-- KEIN NAVBAR (Tunnel Vision = 2x Conversion) -->
 
-<!-- ══════ HERO: Persoenlich ══════ -->
-<section class="min-h-dvh flex flex-col justify-center px-6 md:px-16 pt-16 pb-20 relative">
-  <div class="max-w-[820px] relative z-10">
+<!-- ══════ HERO: Foto als Fullscreen-Hintergrund ══════ -->
+<section class="min-h-dvh flex flex-col justify-end px-6 md:px-16 pb-20 relative overflow-hidden">
+  <!-- Hintergrundbild (echtes Firmenfoto) -->
+  <div class="absolute inset-0">
+    <img src="https://metallbau-lauterbach.de/wp-content/uploads/bb-plugin/cache/FTK_075-1024x684-panorama-1bffaf7c1449880e5925c1e57c309a8b-.jpg" alt="" class="w-full h-full object-cover scale-105" id="heroBg">
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/70 to-[#0a0a0a]/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/80 to-transparent"></div>
+  </div>
 
-    <!-- Firmenlogo via Clearbit -->
+  <div class="max-w-[820px] relative z-10">
     <div class="reveal mb-10">
-      <img src="https://logo.clearbit.com/mblauterbach.de" alt="" class="h-10 rounded-lg opacity-80" onerror="this.style.display='none'">
+      <img src="https://logo.clearbit.com/mblauterbach.de" alt="" class="h-10 rounded-lg opacity-90 drop-shadow-lg" onerror="this.style.display='none'">
     </div>
 
-    <h1 class="reveal d1 font-serif text-[clamp(36px,6vw,72px)] font-bold tracking-[-0.04em] leading-[0.98] mb-6">
+    <h1 class="reveal d1 font-serif text-[clamp(38px,6.5vw,76px)] font-bold tracking-[-0.04em] leading-[0.96] mb-6 drop-shadow-[0_2px_24px_rgba(0,0,0,0.6)]">
       Ein <em class="gradient-text italic">Entwurf</em><br>fuer MB Lauterbach Metallbau GmbH
     </h1>
 
-    <p class="reveal d2 text-[18px] text-white/40 max-w-[460px] leading-relaxed mb-10">
-      MB Lauterbach Metallbau GmbH realisiert anspruchsvolle Stahl- und Metallkonstruktionen für Industrie und Maschinenbau. Von der Planung bis zur Montage aus einer Hand.
+    <p class="reveal d2 text-[18px] text-white/60 max-w-[460px] leading-relaxed mb-10 drop-shadow-[0_1px_10px_rgba(0,0,0,0.5)]">
+      MB Lauterbach Metallbau GmbH fertigt und montiert Stahlkonstruktionen für Industrie, Gewerbe und private Auftraggeber — präzise, termingerecht und mit handwerklichem Anspruch.
     </p>
 
     <div class="reveal d3 flex flex-col sm:flex-row gap-3">
@@ -86,31 +91,22 @@ body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opa
         Kostenlos besprechen
         <span class="text-lg">&#8599;</span>
       </a>
-      <a href="#leistungen" class="inline-flex items-center text-white/30 px-6 py-4 rounded-2xl text-[15px] border border-white/[0.06] hover:text-white/60 hover:border-white/[0.12] transition-all duration-300">
+      <a href="#leistungen" class="inline-flex items-center text-white/40 px-6 py-4 rounded-2xl text-[15px] border border-white/[0.1] hover:text-white/70 hover:border-white/[0.2] hover:bg-white/[0.05] backdrop-blur-sm transition-all duration-300">
         Was steckt dahinter
       </a>
     </div>
   </div>
 </section>
 
-<!-- ══════ HERO IMAGE (3D Tilt + echte Firma) ══════ -->
-<div class="px-6 md:px-16 pb-28 max-w-[1100px] mx-auto">
-  <div class="tilt reveal rounded-3xl overflow-hidden relative" id="tiltFrame">
-    <img src="https://metallbau-lauterbach.de/wp-content/uploads/bb-plugin/cache/FTK_075-1024x684-panorama-1bffaf7c1449880e5925c1e57c309a8b-.jpg" alt="MB Lauterbach Metallbau GmbH" class="w-full aspect-[16/9] object-cover">
-    <div class="absolute inset-0 rounded-3xl shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] pointer-events-none"></div>
-    <div class="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-transparent pointer-events-none" id="tiltRef"></div>
-  </div>
-</div>
-
 <!-- ══════ SERVICES MARQUEE ══════ -->
 <div class="border-y border-white/[0.04] py-5 mb-24 overflow-hidden">
   <div class="mq-track">
-    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Stahl- und Metallkonstruktionen</span>
-    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Maschinenbauteile & Baugruppen</span>
-    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Schweißkonstruktionen & Oberflächenbehandlung</span>
-    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Stahl- und Metallkonstruktionen</span>
-    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Maschinenbauteile & Baugruppen</span>
-    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Schweißkonstruktionen & Oberflächenbehandlung</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Stahlbau & Konstruktion</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Treppen, Geländer & Tore</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Schweißtechnik & Sonderanfertigung</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Stahlbau & Konstruktion</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Treppen, Geländer & Tore</span>
+    <span class="font-serif text-[44px] md:text-[56px] font-light tracking-tight text-white/[0.05] italic whitespace-nowrap">Schweißtechnik & Sonderanfertigung</span>
   </div>
 </div>
 
@@ -119,20 +115,20 @@ body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opa
   <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.04] rounded-3xl overflow-hidden">
     
     <div class="bg-[#111] p-8 text-center hover:bg-[#151515] transition-colors duration-300">
-      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="25" data-suffix="+">0+</span></div>
+      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="20" data-suffix="+">0+</span></div>
       <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Jahre Erfahrung</div>
     </div>
     <div class="bg-[#111] p-8 text-center hover:bg-[#151515] transition-colors duration-300">
-      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="300" data-suffix="+">0+</span></div>
-      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Projekte realisiert</div>
+      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="500" data-suffix="+">0+</span></div>
+      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Projekte</div>
     </div>
     <div class="bg-[#111] p-8 text-center hover:bg-[#151515] transition-colors duration-300">
-      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="30" data-suffix="+">0+</span></div>
-      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Fachkräfte im Team</div>
+      <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="50" data-suffix="+">0+</span></div>
+      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Mitarbeiter</div>
     </div>
     <div class="bg-[#111] p-8 text-center hover:bg-[#151515] transition-colors duration-300">
       <div class="font-serif text-[34px] font-bold tracking-tight text-white leading-none"><span data-count="100" data-suffix="%">0%</span></div>
-      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Eigenleistung</div>
+      <div class="text-[12px] text-white/25 mt-2 tracking-[0.04em] uppercase">Qualität</div>
     </div>
   </div>
 </div>
@@ -141,26 +137,26 @@ body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opa
 <section class="px-6 md:px-16 max-w-[1100px] mx-auto pb-32" id="leistungen">
   <div class="reveal text-[11px] font-medium tracking-[0.14em] uppercase text-[#6366f1] mb-4">Leistungen</div>
   <h2 class="reveal d1 font-serif text-[clamp(28px,4vw,48px)] font-semibold tracking-[-0.03em] leading-[1.1] mb-5 max-w-[520px]">Unsere Leistungen</h2>
-  <p class="reveal d2 text-[16px] text-white/35 max-w-[440px] leading-relaxed mb-16">Vom Einzelteil bis zur komplexen Baugruppe — wir decken das gesamte Spektrum des metallverarbeitenden Handwerks ab.</p>
+  <p class="reveal d2 text-[16px] text-white/35 max-w-[440px] leading-relaxed mb-16">Vom Einzelstück bis zur Serienfertigung bieten wir das komplette Spektrum der Metallverarbeitung.</p>
   <div class="grid md:grid-cols-3 gap-4">
     
     <div class="reveal delay-1 group bg-[#141414] rounded-2xl p-8 border border-white/[0.04] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] transition-all duration-500 relative overflow-hidden">
       <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
       <div class="font-serif text-[40px] font-light text-white/[0.06] leading-none mb-5 tracking-tight">01</div>
-      <h3 class="text-[17px] font-semibold tracking-[-0.02em] mb-2 relative">Stahl- und Metallkonstruktionen</h3>
-      <p class="text-[14px] text-white/40 leading-relaxed relative">Planung und Fertigung von Trägerkonstruktionen, Rahmenbauteilen und Sonderkonstruktionen nach Zeichnung oder Aufmaß. Maßgefertigte Lösungen für industrielle Anforderungen.</p>
+      <h3 class="text-[17px] font-semibold tracking-[-0.02em] mb-2 relative">Stahlbau & Konstruktion</h3>
+      <p class="text-[14px] text-white/40 leading-relaxed relative">Wir planen und fertigen tragende Stahlkonstruktionen für Industrie, Gewerbe und Wohnungsbau — exakt nach Maß, Zeichnung und statischen Anforderungen.</p>
     </div>
     <div class="reveal delay-2 group bg-[#141414] rounded-2xl p-8 border border-white/[0.04] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] transition-all duration-500 relative overflow-hidden">
       <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
       <div class="font-serif text-[40px] font-light text-white/[0.06] leading-none mb-5 tracking-tight">02</div>
-      <h3 class="text-[17px] font-semibold tracking-[-0.02em] mb-2 relative">Maschinenbauteile & Baugruppen</h3>
-      <p class="text-[14px] text-white/40 leading-relaxed relative">Präzisionsgefertigte Einzelteile und montierte Baugruppen für den allgemeinen Maschinenbau. Enge Toleranzen, reproduzierbare Qualität.</p>
+      <h3 class="text-[17px] font-semibold tracking-[-0.02em] mb-2 relative">Treppen, Geländer & Tore</h3>
+      <p class="text-[14px] text-white/40 leading-relaxed relative">Handgefertigte Treppen, Geländer und Tore aus Stahl, Edelstahl und Eisen — funktional ausgeführt und dauerhaft verarbeitet.</p>
     </div>
     <div class="reveal delay-3 group bg-[#141414] rounded-2xl p-8 border border-white/[0.04] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] transition-all duration-500 relative overflow-hidden">
       <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
       <div class="font-serif text-[40px] font-light text-white/[0.06] leading-none mb-5 tracking-tight">03</div>
-      <h3 class="text-[17px] font-semibold tracking-[-0.02em] mb-2 relative">Schweißkonstruktionen & Oberflächenbehandlung</h3>
-      <p class="text-[14px] text-white/40 leading-relaxed relative">Zertifizierte Schweißarbeiten in Stahl, Edelstahl und Aluminium sowie Oberflächenbehandlung nach Kundenvorgabe. Für dauerhaft belastbare Verbindungen.</p>
+      <h3 class="text-[17px] font-semibold tracking-[-0.02em] mb-2 relative">Schweißtechnik & Sonderanfertigung</h3>
+      <p class="text-[14px] text-white/40 leading-relaxed relative">Individuelle Sonderanfertigungen und professionelle Schweißarbeiten für Maschinen, Anlagen und Einzelbauteile jeder Größenordnung.</p>
     </div>
   </div>
 </section>
@@ -200,7 +196,7 @@ body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opa
   <div class="reveal relative bg-[#111] rounded-[28px] p-12 md:p-20 text-center overflow-hidden border border-white/[0.03]">
     <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-[#6366f1] opacity-[0.05] rounded-full blur-[80px] pointer-events-none"></div>
     <h2 class="font-serif text-[clamp(26px,3.5vw,42px)] font-semibold tracking-[-0.03em] leading-[1.12] mb-4 relative">Bereit für den nächsten Schritt?</h2>
-    <p class="text-[16px] text-white/35 max-w-[400px] mx-auto mb-10 leading-relaxed relative">Sprechen Sie uns an — wir prüfen Ihre Anforderungen und erstellen ein individuelles Angebot. Schnell, verbindlich und ohne Umwege.</p>
+    <p class="text-[16px] text-white/35 max-w-[400px] mx-auto mb-10 leading-relaxed relative">Teilen Sie uns Ihr Projekt mit — wir erstellen ein unverbindliches Angebot und begleiten Sie von der Planung bis zur fertigen Montage.</p>
     <a href="mailto:info@mblauterbach.de" class="glow-btn inline-flex items-center gap-2 bg-[#6366f1] text-white px-9 py-4 rounded-2xl text-[15px] font-semibold relative">
       Jetzt Kontakt aufnehmen <span class="text-lg">&#8599;</span>
     </a>
@@ -256,6 +252,12 @@ window.addEventListener('scroll',()=>{
 
 // Smooth anchors
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}}));
+
+// Parallax hero background
+const heroBg=document.getElementById('heroBg');
+if(heroBg&&window.innerWidth>768){
+  window.addEventListener('scroll',()=>{const s=window.scrollY;if(s<window.innerHeight){heroBg.style.transform=`scale(1.05) translateY(${s*0.3}px)`}},{passive:true});
+}
 </script>
 </body>
 </html>
