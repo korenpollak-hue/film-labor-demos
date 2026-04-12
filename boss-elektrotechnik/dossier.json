@@ -1,0 +1,58 @@
+{
+  "firma": "Boss Elektrotechnik",
+  "url": "serviceboss.de",
+  "branche": "Elektrotechnik",
+  "branche_key": "handwerk",
+  "branche_label": "Elektrotechnik",
+  "logo_url": "https://logo.clearbit.com/serviceboss.de",
+  "favicon_url": "",
+  "about_text": "Boss Elektrotechnik ist ein kompetenter Elektro-Fachbetrieb in Frankfurt am Main. Inhaber Volker Boss und sein Team betreuen Alt- und Neubauinstallationen, Haustechnik, Datentechnik und Solartechnik. Mit einem Fuhrpark an Servicefahrzeugen ist der Betrieb schnell vor Ort.",
+  "about_headline": "Elektrotechnik mit Erfahrung",
+  "services": [
+    {
+      "title": "Elektroinstallation",
+      "description": "Alt- und Neubauinstallationen, Renovierungen und komplette Haustechnik aus einer Hand."
+    },
+    {
+      "title": "KNX & Smart Home",
+      "description": "KNX Programmierung und Service für intelligente Gebäudesteuerung."
+    },
+    {
+      "title": "Solartechnik & E-CHECK",
+      "description": "Solartechnik, Alarmanlagen und professionelle Betriebsmittelprüfung nach E-CHECK Standard."
+    }
+  ],
+  "team": [
+    {
+      "name": "Volker Boss",
+      "role": "Inhaber & Elektroinstallateurmeister",
+      "photo": ""
+    }
+  ],
+  "verified_stats": [],
+  "real_images": [
+    "https://serviceboss.de/content/image_de/main/start/start_01.jpg",
+    "https://serviceboss.de/content/image_de/main/start/start_02.jpg"
+  ],
+  "colors": [
+    "oklch(0.58 0.14 55)",
+    "oklch(0.95 0.04 55)"
+  ],
+  "data_sources": [
+    "website"
+  ],
+  "tagline_short": "Der kompetente Elektro-Fachbetrieb",
+  "hero_headline": "Ihr <em>Elektro-Fachbetrieb</em> in Frankfurt",
+  "hero_subline": "Elektroinstallation, KNX-Programmierung und Solartechnik. Volker Boss und sein Team sind schnell und zuverlässig vor Ort.",
+  "services_headline": "Leistungen",
+  "services_subline": "Von der Installation bis zur Wartung",
+  "portfolio_headline": "Einblicke",
+  "portfolio_subline": "Aus unserem Arbeitsalltag",
+  "cta_headline": "Elektro-Projekt geplant?",
+  "cta_text": "Wir beraten Sie gerne zu Ihrem Vorhaben. Rufen Sie an oder schreiben Sie uns.",
+  "cta_button": "Jetzt anfragen",
+  "meta_description": "Boss Elektrotechnik Frankfurt - Elektroinstallation, KNX, Solartechnik und E-CHECK vom Meisterbetrieb.",
+  "email": "elektroboss@web.de",
+  "linkedin_data": {},
+  "google_data": {}
+}
