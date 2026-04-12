@@ -1,0 +1,61 @@
+{
+  "firma": "Fach Metallbau GmbH",
+  "url": "fach-metallbau.de",
+  "branche": "Metallbau",
+  "branche_key": "handwerk",
+  "branche_label": "Metallbau",
+  "logo_url": "https://logo.clearbit.com/fach-metallbau.de",
+  "favicon_url": "",
+  "about_text": "Die Fach Metallbau GmbH in Kirchhain ist ein zertifizierter Meisterbetrieb unter der Leitung von Geschäftsführer Gerhard Fach. Das Unternehmen realisiert individuelle Sonderkonstruktionen aus Stahl, Edelstahl und Aluminium für private, gewerbliche und öffentliche Auftraggeber. Beratung, Fertigung und Montage aus einer Hand.",
+  "about_headline": "Kompetenz in Metall und Glas",
+  "services": [
+    {
+      "title": "Geländer & Treppen",
+      "description": "Geländer aus Stahl, Edelstahl und Glas sowie individuelle Treppenkonstruktionen für innen und außen."
+    },
+    {
+      "title": "Aluminium-Glas-Fassaden",
+      "description": "Fassadenbau mit Aluminium und Glas. Dazu Überdachungen, Balkone und Sonderkonstruktionen."
+    },
+    {
+      "title": "Zäune, Tore & Gitter",
+      "description": "Einfriedungen, Tore und Gitter nach Maß. Auch Blech- und Schweißarbeiten für Sonderwünsche."
+    }
+  ],
+  "team": [
+    {
+      "name": "Gerhard Fach",
+      "role": "Geschäftsführer",
+      "photo": ""
+    }
+  ],
+  "verified_stats": [],
+  "real_images": [
+    "https://www.fach-metallbau.de/wp-content/uploads/2020/10/Slider-Metallbearbeitung-1.jpg",
+    "https://www.fach-metallbau.de/wp-content/uploads/2020/11/Slider-Gesundheitszentrum-Steg.jpg",
+    "https://www.fach-metallbau.de/wp-content/uploads/2020/10/Slider-Elkamet.jpg",
+    "https://www.fach-metallbau.de/wp-content/uploads/2020/10/Slider-Kita-Marburg.jpg",
+    "https://www.fach-metallbau.de/wp-content/uploads/2020/10/Slider-Gelaender-Uniklinikum-NEU.jpg"
+  ],
+  "colors": [
+    "oklch(0.58 0.14 55)",
+    "oklch(0.95 0.04 55)"
+  ],
+  "data_sources": [
+    "website"
+  ],
+  "tagline_short": "Wir bringen Metall in Form",
+  "hero_headline": "Metall und <em>Glas</em> in Perfektion",
+  "hero_subline": "Zertifizierter Meisterbetrieb in Kirchhain. Individuelle Sonderkonstruktionen für private und öffentliche Auftraggeber.",
+  "services_headline": "Unsere Leistungen",
+  "services_subline": "Alles aus einer Hand",
+  "portfolio_headline": "Referenzen",
+  "portfolio_subline": "Projekte aus Metall und Glas",
+  "cta_headline": "Metallbau-Projekt geplant?",
+  "cta_text": "Gerhard Fach und sein Team beraten Sie gerne zu Ihrem Vorhaben.",
+  "cta_button": "Jetzt anfragen",
+  "meta_description": "Fach Metallbau Kirchhain - Geländer, Treppen, Fassaden und Sonderkonstruktionen aus Stahl, Edelstahl und Aluminium.",
+  "email": "info@fach-metallbau.de",
+  "linkedin_data": {},
+  "google_data": {}
+}
