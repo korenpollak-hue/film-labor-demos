@@ -1,0 +1,93 @@
+{
+  "firma": "APE GmbH",
+  "url": "ape-berlin.de",
+  "branche": "Lasertechnologie",
+  "branche_key": "it",
+  "branche_label": "Lasertechnologie",
+  "logo_url": "https://logo.clearbit.com/ape-berlin.de",
+  "favicon_url": "",
+  "about_text": "APE wurde 1992 von Thomas Lindemann, Jan Popien und Edlef Büttner in Berlin gegründet. Heute arbeiten rund 70 Mitarbeiter an über 30 Produkten für ultraschnelle Laserpuls-Messtechnik. Alle Geräte werden am Standort Berlin-Hohenschönhausen entwickelt und gefertigt.",
+  "about_headline": "Seit 1992. Berlin. Ultrafast.",
+  "services": [
+    {
+      "title": "Laser-Diagnostik",
+      "description": "Autokorrelator, FROG, Spider und Spektrometer — das komplette Spektrum für die Charakterisierung ultrakurzer Laserpulse."
+    },
+    {
+      "title": "Abstimmbare Lichtquellen",
+      "description": "OPO- und OPA-Systeme wie picoEmerald und AVUS — durchstimmbar von UV bis mittlerem Infrarot."
+    },
+    {
+      "title": "OEM-Integration",
+      "description": "Maßgeschneiderte Laser-Subsysteme für Hersteller wie Bruker. Integration in bestehende Plattformen."
+    }
+  ],
+  "team": [
+    {
+      "name": "Dr. Konrad von Volkmann",
+      "role": "CEO",
+      "photo": "https://www.ape-berlin.de/content/uploads/2018/05/KonradvV-APE-1-367x367.jpg"
+    },
+    {
+      "name": "Cornelia Gläser",
+      "role": "CFO",
+      "photo": "https://www.ape-berlin.de/content/uploads/2021/09/Clipboard0conny.jpg"
+    },
+    {
+      "name": "Dr. Ingo Rimke",
+      "role": "CTO",
+      "photo": "https://www.ape-berlin.de/content/uploads/2018/05/IngoR-APE-367x367.jpg"
+    },
+    {
+      "name": "Dr. Thomas Hansel",
+      "role": "COO",
+      "photo": "https://www.ape-berlin.de/content/uploads/2018/05/ThomasH-APE-367x367.jpg"
+    }
+  ],
+  "verified_stats": [
+    {
+      "number": "34",
+      "label": "Jahre Erfahrung",
+      "source": "Website"
+    },
+    {
+      "number": "70",
+      "label": "Mitarbeiter",
+      "source": "Website"
+    },
+    {
+      "number": "30+",
+      "label": "Produkte",
+      "source": "Website"
+    }
+  ],
+  "real_images": [
+    "https://www.ape-berlin.de/content/uploads/2026/03/tunable-light-sources-web-banner-c.png",
+    "https://www.ape-berlin.de/content/uploads/2025/06/6_bilder.jpg",
+    "https://www.ape-berlin.de/content/uploads/2025/08/6_bilder2.jpg",
+    "https://www.ape-berlin.de/content/uploads/2025/06/6_bilder4.jpg"
+  ],
+  "colors": [
+    "oklch(0.58 0.16 260)",
+    "oklch(0.95 0.03 260)"
+  ],
+  "data_sources": [
+    "website",
+    "website/about",
+    "website/team",
+    "website/products"
+  ],
+  "tagline_short": "Ultrafast Laser Solutions. Berlin.",
+  "hero_headline": "Licht messen. <em>Präzise.</em>",
+  "hero_subline": "APE baut Messtechnik und Lichtquellen für Ultrakurzpulslaser. 70 Ingenieure. 30+ Produkte. Made in Berlin seit 1992.",
+  "services_headline": "Was wir bauen",
+  "services_subline": "Vom Autokorrelator bis zum OPO — alles aus einer Berliner Fertigung.",
+  "portfolio_headline": "Unsere Systeme im Einsatz",
+  "portfolio_subline": "Laser-Diagnostik und Lichtquellen für Forschung weltweit.",
+  "cta_headline": "Anwendung besprechen?",
+  "cta_text": "Unsere Physiker beraten Sie direkt. Kein Vertrieb dazwischen.",
+  "cta_button": "Kontakt aufnehmen",
+  "meta_description": "APE GmbH Berlin — Messtechnik für Ultrakurzpulslaser seit 1992.",
+  "linkedin_data": {},
+  "google_data": {}
+}
