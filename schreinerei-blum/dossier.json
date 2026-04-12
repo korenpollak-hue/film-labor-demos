@@ -1,0 +1,82 @@
+{
+  "firma": "Schreinerei Blum",
+  "url": "schreinerei-blum.de",
+  "branche": "Schreinerei",
+  "branche_key": "handwerk",
+  "branche_label": "Schreinerei",
+  "logo_url": "https://logo.clearbit.com/schreinerei-blum.de",
+  "favicon_url": "",
+  "about_text": "H. & W. Blum Schreinereibetrieb e.K. in Frankfurt-Unterliederbach fertigt seit 1933 Fenster, Türen und Bauelemente. Gegründet von Heinrich Blum, heute geführt von Thomas Günther mit Sohn Robin Günther als frisch geprüftem Meister. Rund 25 Mitarbeiter und 10 Servicefahrzeuge.",
+  "about_headline": "Gutes Handwerk seit 1933",
+  "services": [
+    {
+      "title": "Fenster & Türen",
+      "description": "PaX-Fenster und Haustüren aus Holz, Kunststoff, Aluminium und Materialkombinationen. Auch für Altbau und Denkmalschutz."
+    },
+    {
+      "title": "Balkon- & Terrassentüren",
+      "description": "Hebe-Schiebe-Türen, Falt-Schiebe-Türen und Parallel-Schiebe-Kipp-Türen für großzügige Übergänge."
+    },
+    {
+      "title": "Sonnen- & Insektenschutz",
+      "description": "Raffstoren, Rollladen, Textilscreens und Insektenschutzlösungen passend zu Ihren Fenstern."
+    }
+  ],
+  "team": [
+    {
+      "name": "Thomas Günther",
+      "role": "Inhaber",
+      "photo": ""
+    },
+    {
+      "name": "Robin Günther",
+      "role": "Schreinermeister",
+      "photo": ""
+    }
+  ],
+  "verified_stats": [
+    {
+      "number": "Seit 1933",
+      "label": "Schreinereibetrieb",
+      "source": "website"
+    },
+    {
+      "number": "~25",
+      "label": "Mitarbeiter",
+      "source": "website"
+    },
+    {
+      "number": "131+",
+      "label": "Bewertungen",
+      "source": "kennstdueinen.de"
+    }
+  ],
+  "real_images": [
+    "https://www.schreinerei-blum.de/sites/131201/files/styles/jumbotron_junior_mobile/public/referenz/2205/schreinerei_hw_holz_fenster_denkmalschutz_01-12.jpg",
+    "https://www.schreinerei-blum.de/sites/131201/files/styles/3_2_fallback_w200/public/2024-09/gespraech_3.jpg",
+    "https://www.schreinerei-blum.de/sites/131201/files/styles/3_2_fallback_w200/public/referenz/2208/schreinerei_hw_blum_-_kunststoff_fenster_-_01-26-1.png",
+    "https://www.schreinerei-blum.de/sites/131201/files/styles/520x290/public/2024-09/gruppe-5.jpg"
+  ],
+  "colors": [
+    "oklch(0.58 0.14 55)",
+    "oklch(0.95 0.04 55)"
+  ],
+  "data_sources": [
+    "website",
+    "websearch"
+  ],
+  "tagline_short": "Gutes Handwerk seit 1933",
+  "hero_headline": "Schreinerei mit <em>Tradition</em> seit 1933",
+  "hero_subline": "Fenster, Türen und Bauelemente vom Meisterbetrieb in Frankfurt. Familie Günther führt weiter, was Heinrich Blum begann.",
+  "services_headline": "Unsere Leistungen",
+  "services_subline": "Fenster, Türen und mehr vom Fachbetrieb",
+  "portfolio_headline": "Referenzen",
+  "portfolio_subline": "Ausgewählte Arbeiten",
+  "cta_headline": "Neue Fenster oder Türen geplant?",
+  "cta_text": "Thomas und Robin Günther beraten Sie gerne in Frankfurt-Unterliederbach.",
+  "cta_button": "Jetzt anfragen",
+  "meta_description": "Schreinerei Blum Frankfurt - Fenster, Türen und Bauelemente seit 1933. Meisterbetrieb mit über 90 Jahren Erfahrung.",
+  "email": "info@schreinerei-blum.de",
+  "linkedin_data": {},
+  "google_data": {}
+}
