@@ -1,0 +1,73 @@
+{
+  "firma": "Müller Stahl- und Metallbau",
+  "url": "https://stahl-metallbau-mueller.de",
+  "branche": "Stahl- und Metallbau",
+  "branche_key": "handwerk",
+  "branche_label": "Metallbau",
+  "logo_url": "https://logo.clearbit.com/stahl-metallbau-mueller.de",
+  "favicon_url": "",
+  "about_text": "Seit 1924 steht der Name Müller für Metallbau-Handwerk in Mittelhessen. Heute in der vierten Generation geführt, verbindet der Meisterbetrieb und Schweißfachbetrieb aus Gemünden-Felda traditionelles Können mit modernem Design.",
+  "about_headline": "Handwerkstradition seit 1924",
+  "services": [
+    {
+      "title": "Geländer & Treppen",
+      "description": "Außen- und Innengeländer, Treppen und Balkone nach Maß gefertigt."
+    },
+    {
+      "title": "Überdachungen & Carports",
+      "description": "Vordächer, Überdachungen und Carports aus Stahl und Glas."
+    },
+    {
+      "title": "Zaun- und Toranlagen",
+      "description": "Individuelle Zaun- und Toranlagen, Garagentore und Industrietore."
+    }
+  ],
+  "team": [
+    {
+      "name": "Thomas Müller",
+      "role": "Inhaber",
+      "photo": ""
+    }
+  ],
+  "verified_stats": [
+    {
+      "number": "1924",
+      "label": "Gegründet",
+      "source": "website"
+    },
+    {
+      "number": "4.",
+      "label": "Generation",
+      "source": "website"
+    }
+  ],
+  "real_images": [
+    "https://stahl-metallbau-mueller.de/images/py/slider/home/14.jpg",
+    "https://stahl-metallbau-mueller.de/images/py/slider/home/23.jpg",
+    "https://stahl-metallbau-mueller.de/images/py/slider/home/8.jpg",
+    "https://stahl-metallbau-mueller.de/images/py/slider/home/18.jpg",
+    "https://stahl-metallbau-mueller.de/images/bagallery/original/agel001.JPG",
+    "https://stahl-metallbau-mueller.de/images/bagallery/original/sfw005.jpg"
+  ],
+  "colors": [
+    "oklch(0.58 0.14 55)",
+    "oklch(0.95 0.04 55)"
+  ],
+  "data_sources": [
+    "website"
+  ],
+  "tagline_short": "Handwerkstradition seit 1924",
+  "hero_headline": "Metallbau mit <em>Tradition</em>",
+  "hero_subline": "Seit 1924 in Familienhand. Meisterbetrieb für Stahl- und Metallbau in vierter Generation.",
+  "services_headline": "Unsere Leistungen",
+  "services_subline": "Vom Geländer bis zur Sonderkonstruktion.",
+  "portfolio_headline": "Referenzen",
+  "portfolio_subline": "Projekte aus unserer Werkstatt.",
+  "cta_headline": "Projekt in Planung?",
+  "cta_text": "Wir beraten Sie gerne zu Ihrem Metallbau-Vorhaben.",
+  "cta_button": "Jetzt anfragen",
+  "meta_description": "Müller Stahl- und Metallbau - Meisterbetrieb seit 1924 in Gemünden-Felda. Geländer, Treppen, Überdachungen und Sonderkonstruktionen.",
+  "email": "info@stahl-metallbau-mueller.de",
+  "linkedin_data": {},
+  "google_data": {}
+}
