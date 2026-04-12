@@ -1,0 +1,66 @@
+{
+  "firma": "EKT Werkzeug- und Maschinenbau GmbH",
+  "url": "https://ekt-woellstadt.de",
+  "branche": "CNC-Fertigung & Maschinenbau",
+  "branche_key": "maschinenbau",
+  "branche_label": "Maschinenbau",
+  "logo_url": "https://logo.clearbit.com/ekt-woellstadt.de",
+  "favicon_url": "",
+  "about_text": "Seit über 20 Jahren ist die EKT Werkzeug- und Maschinenbau GmbH ein verlässlicher Partner für Präzisionsfertigung in der Wetterau. CNC-Fräsen, CNC-Drehen und manuelle Bearbeitung aus einer Hand, für kleine bis mittlere Auflagen mit höchster Genauigkeit.",
+  "about_headline": "Präzision aus Passion",
+  "services": [
+    {
+      "title": "CNC-Fräsen",
+      "description": "Hochpräzise Frästeile für Industrie und Maschinenbau, von Einzelstücken bis zur Kleinserie."
+    },
+    {
+      "title": "CNC-Drehen",
+      "description": "Drehteile in allen gängigen Materialien, termintreu und maßgenau gefertigt."
+    },
+    {
+      "title": "Lohnfertigung",
+      "description": "Flexible Kapazitäten für Ihre Produktion. Manuelles Drehen und Fräsen inklusive."
+    }
+  ],
+  "team": [
+    {
+      "name": "Dirk Kötter",
+      "role": "Geschäftsführer",
+      "photo": ""
+    },
+    {
+      "name": "Ingo Traumüller",
+      "role": "Geschäftsführer",
+      "photo": ""
+    }
+  ],
+  "verified_stats": [
+    {
+      "number": "20+",
+      "label": "Jahre Erfahrung",
+      "source": "website"
+    }
+  ],
+  "real_images": [],
+  "colors": [
+    "oklch(0.55 0.12 50)",
+    "oklch(0.95 0.03 50)"
+  ],
+  "data_sources": [
+    "website"
+  ],
+  "tagline_short": "Präzision aus Passion",
+  "hero_headline": "CNC-Fertigung mit <em>Präzision</em>",
+  "hero_subline": "Seit über 20 Jahren Ihr Partner für Fräsen, Drehen und Lohnfertigung in der Wetterau.",
+  "services_headline": "Unsere Fertigung",
+  "services_subline": "Zuverlässig, flexibel und maßgenau.",
+  "portfolio_headline": "Einblicke",
+  "portfolio_subline": "Präzisionsteile aus unserer Werkstatt.",
+  "cta_headline": "Projekt geplant?",
+  "cta_text": "Sprechen Sie mit uns über Ihr nächstes Fertigungsprojekt.",
+  "cta_button": "Jetzt anfragen",
+  "meta_description": "EKT Werkzeug- und Maschinenbau GmbH - CNC-Fräsen, CNC-Drehen und Lohnfertigung aus Wöllstadt in der Wetterau.",
+  "email": "info@ekt-woellstadt.de",
+  "linkedin_data": {},
+  "google_data": {}
+}
