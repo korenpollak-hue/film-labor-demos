@@ -1,0 +1,64 @@
+{
+  "firma": "Promega GmbH",
+  "url": "promega.de",
+  "branche": "Biotechnologie",
+  "logo_url": "",
+  "favicon_url": "",
+  "about_text": "Als Teil der weltweit tätigen Promega Corporation verbindet Promega GmbH globale Innovationskraft mit lokalem Service auf höchstem Niveau. Unsere Lösungen unterstützen Labore in der Grundlagenforschung, klinischen Diagnostik und pharmazeutischen Entwicklung. Qualität, Reproduzierbarkeit und technischer Support stehen bei uns an erster Stelle.",
+  "services": [
+    {
+      "icon": "🧬",
+      "title": "Molekularbiologie",
+      "description": "Hochwertige Reagenzien und Kits für DNA- und RNA-Analyse, Klonierung sowie Sequenzierung – optimiert für reproduzierbare Ergebnisse."
+    },
+    {
+      "icon": "🔬",
+      "title": "Zell- und Proteinanalytik",
+      "description": "Assays für Zellviabilität, Apoptose, Genexpression und Proteinquantifizierung, abgestimmt auf anspruchsvolle Forschungsumgebungen."
+    },
+    {
+      "icon": "💊",
+      "title": "Drug Discovery & Diagnostik",
+      "description": "Validierte Plattformen für die pharmazeutische Entwicklung und klinische Diagnostik – von der Wirkstoffforschung bis zur forensischen Anwendung."
+    }
+  ],
+  "team": [],
+  "stats": [
+    {
+      "number": "40+",
+      "label": "Jahre Erfahrung"
+    },
+    {
+      "number": "4.000+",
+      "label": "Produkte weltweit"
+    },
+    {
+      "number": "50+",
+      "label": "Länder"
+    },
+    {
+      "number": "ISO",
+      "label": "Zertifizierte Qualität"
+    }
+  ],
+  "tagline": "",
+  "description": "",
+  "colors": [
+    "oklch(0.50 0.14 250)",
+    "oklch(0.95 0.03 250)"
+  ],
+  "tagline_short": "Wissenschaft. Präzision. Fortschritt.",
+  "hero_headline": "Lösungen für die moderne Lebenswissenschaft",
+  "hero_subline": "Promega GmbH liefert hochwertige Reagenzien, Assays und Instrumente für Forschung, Diagnostik und Arzneimittelentwicklung. Verlässlich, präzise und seit Jahrzehnten bewährt.",
+  "about_headline": "Wissenschaft, der Sie vertrauen können",
+  "services_headline": "Unsere Leistungen",
+  "services_subline": "Von molekularbiologischen Werkzeugen bis hin zu automatisierten Plattformen – wir decken das gesamte Spektrum moderner Laboranforderungen ab.",
+  "portfolio_headline": "Ausgewählte Anwendungsbereiche",
+  "portfolio_subline": "Unsere Lösungen kommen in führenden Forschungseinrichtungen, Pharmaunternehmen und diagnostischen Laboren weltweit zum Einsatz.",
+  "cta_headline": "Bereit für den nächsten Schritt?",
+  "cta_text": "Sprechen Sie mit unseren Experten – wir helfen Ihnen, die richtige Lösung für Ihr Labor zu finden. Persönlich, kompetent und ohne Umwege.",
+  "cta_button": "Jetzt Kontakt aufnehmen",
+  "meta_description": "Promega GmbH – Reagenzien, Kits und Instrumente für Lebenswissenschaften, Diagnostik und Pharmakologie. Qualität aus einer Hand.",
+  "branche_label": "Biotechnologie",
+  "branche_key": "pharma"
+}
