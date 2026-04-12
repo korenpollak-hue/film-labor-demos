@@ -1,0 +1,69 @@
+{
+  "firma": "Schreinerei Pohl",
+  "url": "https://schreinerei-pohl.de",
+  "branche": "Schreinerei & Innenausbau",
+  "branche_key": "handwerk",
+  "branche_label": "Schreinerei",
+  "logo_url": "https://logo.clearbit.com/schreinerei-pohl.de",
+  "favicon_url": "",
+  "about_text": "Gegründet 1955 von Schreinermeister Wilhelm Pohl, wird die Schreinerei Pohl heute in dritter Generation von Thorsten Pohl geführt. Seit dem Umzug 2008 an den Kühhornshofweg in Frankfurt fertigt das Team Fenster, Haustüren und individuellen Innenausbau.",
+  "about_headline": "Schreinerhandwerk seit 1955",
+  "services": [
+    {
+      "title": "Fenster & Haustüren",
+      "description": "Maßgefertigte Fenster und Haustüren in Holz, individuell und energieeffizient."
+    },
+    {
+      "title": "Türen",
+      "description": "Innentüren und Speziallösungen vom Meisterbetrieb."
+    },
+    {
+      "title": "Innenausbau & Parkett",
+      "description": "Individueller Innenausbau und professionelle Parkettverlegung."
+    }
+  ],
+  "team": [
+    {
+      "name": "Thorsten Pohl",
+      "role": "Geschäftsführer",
+      "photo": ""
+    }
+  ],
+  "verified_stats": [
+    {
+      "number": "1955",
+      "label": "Gegründet",
+      "source": "website"
+    },
+    {
+      "number": "3.",
+      "label": "Generation",
+      "source": "website"
+    }
+  ],
+  "real_images": [
+    "https://www.schreinerei-pohl.de/wp-content/uploads/2022/11/IMG_0768-1-retro-300x200.jpg",
+    "https://www.schreinerei-pohl.de/wp-content/uploads/2018/09/IMG_3918-300x200.jpg"
+  ],
+  "colors": [
+    "oklch(0.58 0.14 55)",
+    "oklch(0.95 0.04 55)"
+  ],
+  "data_sources": [
+    "website"
+  ],
+  "tagline_short": "Schreinerhandwerk seit 1955",
+  "hero_headline": "Handwerk mit <em>Charakter</em>",
+  "hero_subline": "Fenster, Türen und Innenausbau vom Frankfurter Meisterbetrieb. Seit drei Generationen.",
+  "services_headline": "Unsere Leistungen",
+  "services_subline": "Maßarbeit aus Meisterhand.",
+  "portfolio_headline": "Einblicke",
+  "portfolio_subline": "Arbeiten aus unserer Werkstatt.",
+  "cta_headline": "Projekt geplant?",
+  "cta_text": "Wir beraten Sie gerne zu Fenstern, Türen und Innenausbau.",
+  "cta_button": "Jetzt anfragen",
+  "meta_description": "Schreinerei Pohl Frankfurt - Fenster, Haustüren, Innenausbau und Parkett seit 1955. Meisterbetrieb in dritter Generation.",
+  "email": "info@schreinerei-pohl.de",
+  "linkedin_data": {},
+  "google_data": {}
+}
