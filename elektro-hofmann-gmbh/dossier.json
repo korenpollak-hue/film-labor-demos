@@ -1,0 +1,53 @@
+{
+  "firma": "Elektro Hofmann GmbH",
+  "url": "https://elektro-hofmann-gmbh.de",
+  "branche": "Elektrotechnik & Gebäudetechnik",
+  "branche_key": "handwerk",
+  "branche_label": "Elektrotechnik",
+  "logo_url": "https://logo.clearbit.com/elektro-hofmann-gmbh.de",
+  "favicon_url": "",
+  "about_text": "Elektro Hofmann ist der kompetente Elektro-Fachbetrieb in Frankfurt am Main. Von Elektroplanung über Photovoltaik bis zur Sicherheitstechnik bietet das Team alles rund um moderne Gebäudetechnik aus einer Hand.",
+  "about_headline": "Ihr Elektro-Fachbetrieb in Frankfurt",
+  "services": [
+    {
+      "title": "Elektroinstallation",
+      "description": "Elektroplanung und Installation für Neubauten, Renovierungen und Umbauten in Frankfurt."
+    },
+    {
+      "title": "Photovoltaik",
+      "description": "Solartechnik und Photovoltaikanlagen für nachhaltige Energieversorgung."
+    },
+    {
+      "title": "Sicherheitstechnik",
+      "description": "Alarmanlagen, Türsprechstationen und E-CHECK Sicherheitsprüfungen."
+    }
+  ],
+  "team": [],
+  "verified_stats": [],
+  "real_images": [
+    "https://elektro-hofmann-gmbh.de/content/image_de/main/start/collage.jpg",
+    "https://elektro-hofmann-gmbh.de/content/image_de/main/box/siedle-gestaltung/siedle-gestaltung_00.jpg",
+    "https://elektro-hofmann-gmbh.de/content/image_de/main/box/led-leuchten/led_00.jpg"
+  ],
+  "colors": [
+    "oklch(0.58 0.14 55)",
+    "oklch(0.95 0.04 55)"
+  ],
+  "data_sources": [
+    "website"
+  ],
+  "tagline_short": "Der kompetente Elektro-Fachbetrieb",
+  "hero_headline": "Elektrotechnik mit <em>System</em>",
+  "hero_subline": "Ihr Fachbetrieb für Elektroinstallation, Photovoltaik und Sicherheitstechnik in Frankfurt am Main.",
+  "services_headline": "Unsere Leistungen",
+  "services_subline": "Kompetent und zuverlässig seit Jahren.",
+  "portfolio_headline": "Projekte",
+  "portfolio_subline": "Einblicke in unsere Arbeit.",
+  "cta_headline": "Elektroprojekt geplant?",
+  "cta_text": "Wir beraten Sie gerne zu Ihrem Vorhaben.",
+  "cta_button": "Jetzt anfragen",
+  "meta_description": "Elektro Hofmann GmbH Frankfurt - Elektroinstallation, Photovoltaik, Sicherheitstechnik und Gebäudetechnik.",
+  "email": "info@elektro-hofmann-gmbh.de",
+  "linkedin_data": {},
+  "google_data": {}
+}
