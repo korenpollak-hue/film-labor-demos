@@ -1,0 +1,83 @@
+{
+  "firma": "Testfirma GmbH",
+  "url": "testfirma.de",
+  "branche": "maschinenbau",
+  "branche_key": "maschinenbau",
+  "branche_label": "Maschinenbau",
+  "logo_url": "https://logo.clearbit.com/testfirma.de",
+  "about_text": "Die Testfirma GmbH entwickelt seit 1998 Präzisionswerkzeuge für den industriellen Einsatz. Mit modernster CNC-Technologie und einem erfahrenen Team liefern wir Qualität, auf die Sie sich verlassen können.",
+  "about_headline": "Präzision seit über 25 Jahren",
+  "services": [
+    {
+      "title": "CNC-Fräsen",
+      "description": "Hochpräzise 5-Achs-Fräsarbeiten für Einzelteile und Kleinserien bis 1200mm."
+    },
+    {
+      "title": "Drehen & Bohren",
+      "description": "CNC-gesteuertes Drehen bis 500mm Durchmesser, Toleranzen bis 0.01mm."
+    },
+    {
+      "title": "Qualitätskontrolle",
+      "description": "Eigener Messraum mit 3D-Koordinatenmessung. Zertifiziert nach ISO 9001:2015."
+    }
+  ],
+  "team": [
+    {
+      "name": "Hans Müller",
+      "role": "Geschäftsführer"
+    },
+    {
+      "name": "Lisa Weber",
+      "role": "Vertriebsleitung"
+    },
+    {
+      "name": "Thomas Bauer",
+      "role": "Fertigungsleiter"
+    }
+  ],
+  "verified_stats": [
+    {
+      "number": "25+",
+      "label": "Jahre Erfahrung",
+      "source": "LinkedIn"
+    },
+    {
+      "number": "4.7",
+      "label": "Google Bewertung",
+      "source": "Google"
+    },
+    {
+      "number": "45",
+      "label": "Mitarbeiter",
+      "source": "LinkedIn"
+    }
+  ],
+  "real_images": [
+    "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=1200&h=800&fit=crop",
+    "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=500&fit=crop"
+  ],
+  "colors": [
+    "oklch(0.55 0.12 50)",
+    "oklch(0.95 0.03 50)"
+  ],
+  "data_sources": [
+    "website",
+    "linkedin",
+    "google"
+  ],
+  "tagline_short": "Präzision. Zuverlässigkeit. Qualität.",
+  "hero_headline": "Werkzeuge mit <em>Präzision</em>",
+  "hero_subline": "Testfirma GmbH fertigt hochpräzise CNC-Bauteile für den Maschinenbau. Seit 1998 im Rhein-Main-Gebiet.",
+  "services_headline": "Unsere Fertigungsverfahren",
+  "services_subline": "Von der Einzelteilfertigung bis zur Kleinserie — alles aus einer Hand.",
+  "portfolio_headline": "Aus unserer Fertigung",
+  "portfolio_subline": "Bauteile für führende Maschinenbauer in Deutschland.",
+  "cta_headline": "Projekt besprechen?",
+  "cta_text": "Wir nehmen uns Zeit für Ihre Anforderungen. Ohne Verkaufsdruck.",
+  "cta_button": "Jetzt Kontakt aufnehmen",
+  "meta_description": "Testfirma GmbH — CNC-Präzisionsfertigung seit 1998.",
+  "favicon_url": "",
+  "linkedin_data": {},
+  "google_data": {}
+}
