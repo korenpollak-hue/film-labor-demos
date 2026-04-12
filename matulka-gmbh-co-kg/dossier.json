@@ -1,0 +1,74 @@
+{
+  "firma": "Matulka GmbH & Co. KG",
+  "url": "matulka-gmbh.de",
+  "branche": "Schlosserei & Metallbau",
+  "branche_key": "handwerk",
+  "branche_label": "Schlosserei & Metallbau",
+  "logo_url": "https://logo.clearbit.com/matulka-gmbh.de",
+  "favicon_url": "",
+  "about_text": "Die Matulka GmbH & Co. KG ist ein Familienbetrieb in Hanau-Großauheim mit Wurzeln bis 1871. Gegründet von Gottfried Börner als Schmiede, wird das Unternehmen heute in der 5. Generation von Metallbauermeister Michael Matulka geführt. Zugelassener Schweißfachbetrieb nach DIN EN1090.",
+  "about_headline": "Seit 1871 in Familienhand",
+  "services": [
+    {
+      "title": "Stahl- & Edelstahlbau",
+      "description": "Stahlbauarbeiten grundiert, nasslackiert, feuerverzinkt oder pulverbeschichtet. Edelstahl rostfrei für innen und außen."
+    },
+    {
+      "title": "Geländer, Treppen & Tore",
+      "description": "Individuelle Geländer, Handläufe, Außen- und Innentreppen, Tore und Zäune nach Maß."
+    },
+    {
+      "title": "Überdachungen & Fassaden",
+      "description": "Terrassendächer, Carports, Vordächer und Balkonverkleidungen aus Stahl, Edelstahl oder Aluminium."
+    }
+  ],
+  "team": [
+    {
+      "name": "Michael Matulka",
+      "role": "Metallbauermeister & Geschäftsleitung (5. Generation)",
+      "photo": ""
+    }
+  ],
+  "verified_stats": [
+    {
+      "number": "Seit 1871",
+      "label": "Familienbetrieb",
+      "source": "website"
+    },
+    {
+      "number": "5.",
+      "label": "Generation",
+      "source": "website"
+    }
+  ],
+  "real_images": [
+    "https://www.matulka-gmbh.de/wp-content/uploads/2018/02/DSC01653-900x600.jpg",
+    "https://www.matulka-gmbh.de/wp-content/uploads/2018/02/matulka_mit-kunde-am-plan-1400x551.jpg",
+    "https://www.matulka-gmbh.de/wp-content/uploads/2018/02/DSC01524-1400x933.jpg",
+    "https://www.matulka-gmbh.de/wp-content/uploads/2018/02/DSC01577-1400x933.jpg",
+    "https://www.matulka-gmbh.de/wp-content/uploads/2018/02/matulka_projekt_kita-friedrichsdorf-1-1400x933.jpg",
+    "https://www.matulka-gmbh.de/wp-content/uploads/2018/02/matulka_projekt_balkonanlage-jahnstr-ffm-2-933x1400.jpg",
+    "https://www.matulka-gmbh.de/wp-content/uploads/2018/02/matulka_projekt_kita-bieber-waldhof-1-1400x995.jpg"
+  ],
+  "colors": [
+    "oklch(0.58 0.14 55)",
+    "oklch(0.95 0.04 55)"
+  ],
+  "data_sources": [
+    "website"
+  ],
+  "tagline_short": "Qualität & Innovation. Metall in Form.",
+  "hero_headline": "Metall in <em>Form</em> seit 1871",
+  "hero_subline": "Schlosserei und Metallbau in der 5. Generation. Zugelassener Schweißfachbetrieb in Hanau.",
+  "services_headline": "Unsere Leistungen",
+  "services_subline": "Stahl, Edelstahl und Aluminium nach Maß",
+  "portfolio_headline": "Referenzen",
+  "portfolio_subline": "Ausgewählte Projekte",
+  "cta_headline": "Projekt aus Metall geplant?",
+  "cta_text": "Michael Matulka und sein Team beraten Sie gerne persönlich.",
+  "cta_button": "Jetzt anfragen",
+  "meta_description": "Matulka GmbH Hanau - Schlosserei und Metallbau seit 1871. Stahl, Edelstahl, Aluminium. 5. Generation.",
+  "email": "info@matulka-gmbh.de",
+  "linkedin_data": {},
+  "google_data": {}
+}
