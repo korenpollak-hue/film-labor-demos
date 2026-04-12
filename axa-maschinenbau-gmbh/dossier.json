@@ -1,0 +1,62 @@
+{
+  "firma": "AXA Maschinenbau GmbH",
+  "url": "axa-maschinenbau.de",
+  "branche": "Maschinenbau",
+  "logo_url": "",
+  "favicon_url": "",
+  "about_text": "AXA Maschinenbau GmbH steht für solides deutsches Ingenieurhandwerk verbunden mit modernen Fertigungsmethoden. Wir entwickeln maßgeschneiderte Maschinenlösungen für Kunden aus Industrie und Gewerbe — von der ersten Konstruktionszeichnung bis zur Inbetriebnahme. Zuverlässigkeit, Präzision und langfristige Partnerschaft sind der Kern unserer Arbeit.",
+  "services": [
+    {
+      "title": "Konstruktion & Entwicklung",
+      "description": "Individuelle Maschinenlösungen nach Kundenvorgabe. Wir planen, berechnen und konstruieren technische Anlagen mit modernster CAD-Software."
+    },
+    {
+      "title": "Fertigung & Montage",
+      "description": "Präzisionsfertigung in eigenen Werkstätten mit hochwertigen Materialien. Von Einzelteilen bis zur kompletten Baugruppe."
+    },
+    {
+      "title": "Wartung & Service",
+      "description": "Regelmäßige Inspektion, Instandhaltung und schnelle Störungsbeseitigung — damit Ihre Maschinen zuverlässig laufen."
+    }
+  ],
+  "team": [],
+  "stats": [
+    {
+      "number": "20+",
+      "label": "Jahre Erfahrung"
+    },
+    {
+      "number": "500+",
+      "label": "realisierte Projekte"
+    },
+    {
+      "number": "50+",
+      "label": "Mitarbeiter"
+    },
+    {
+      "number": "100%",
+      "label": "Qualitätskontrolle"
+    }
+  ],
+  "tagline": "",
+  "description": "",
+  "colors": [
+    "oklch(0.50 0.10 240)",
+    "oklch(0.95 0.02 240)"
+  ],
+  "tagline_short": "Präzision. Technik. Verlässlichkeit.",
+  "hero_headline": "Maschinenbau mit <em>Präzision</em> — gefertigt für die Industrie",
+  "hero_subline": "AXA Maschinenbau GmbH entwickelt und produziert technische Anlagen und Maschinenlösungen für anspruchsvolle industrielle Anforderungen. Qualität, die hält.",
+  "about_headline": "Technik mit Substanz",
+  "services_headline": "Unsere Leistungen",
+  "services_subline": "Von der Konstruktion über die Fertigung bis zur Wartung — alles aus einer Hand.",
+  "portfolio_headline": "Ausgewählte Projekte",
+  "portfolio_subline": "Ein Auszug aus unseren realisierten Maschinenbau-Projekten für Kunden aus verschiedenen Industriebereichen.",
+  "cta_headline": "Bereit für den nächsten Schritt?",
+  "cta_text": "Sprechen Sie mit unseren Ingenieuren über Ihre Anforderungen. Wir erarbeiten gemeinsam die passende technische Lösung für Ihr Vorhaben.",
+  "cta_button": "Jetzt Kontakt aufnehmen",
+  "meta_description": "AXA Maschinenbau GmbH — Ihr Partner für Konstruktion, Fertigung und Wartung industrieller Maschinen und Anlagen. Qualität made in Germany.",
+  "branche_label": "Maschinenbau",
+  "branche_key": "maschinenbau",
+  "image_keywords": "industrial machinery manufacturing precision engineering"
+}
