@@ -1,0 +1,62 @@
+{
+  "firma": "H&C Metallbau GmbH",
+  "url": "hc-metallbau.de",
+  "branche": "Maschinenbau",
+  "logo_url": "",
+  "favicon_url": "",
+  "about_text": "Als mittelständisches Unternehmen im Metallbau vereinen wir traditionelles Handwerk mit modernen Fertigungsverfahren. Unsere Stärke liegt in der Kombination aus technischem Know-how, hochwertigen Materialien und einem erfahrenen Team, das auch anspruchsvolle Projekte zuverlässig umsetzt.",
+  "services": [
+    {
+      "title": "Stahlbau & Konstruktion",
+      "description": "Planung und Fertigung von Stahlkonstruktionen nach Maß — für Industrie, Gewerbe und den öffentlichen Bereich. Jedes Projekt wird individuell geplant und mit hoher Maßgenauigkeit umgesetzt."
+    },
+    {
+      "title": "CNC-Bearbeitung & Schweißtechnik",
+      "description": "Präzisionsbearbeitung von Metallteilen mit moderner CNC-Technologie sowie qualifizierte Schweißarbeiten in verschiedenen Verfahren. Kurze Durchlaufzeiten und gleichbleibende Qualität."
+    },
+    {
+      "title": "Montage & Wartung",
+      "description": "Fachgerechte Montage der gefertigten Konstruktionen direkt vor Ort sowie regelmäßige Wartung und Instandhaltung bestehender Anlagen. Zuverlässig, termingerecht, sicher."
+    }
+  ],
+  "team": [],
+  "stats": [
+    {
+      "number": "20+",
+      "label": "Jahre Erfahrung"
+    },
+    {
+      "number": "500+",
+      "label": "Projekte"
+    },
+    {
+      "number": "50+",
+      "label": "Mitarbeiter"
+    },
+    {
+      "number": "100%",
+      "label": "Qualität"
+    }
+  ],
+  "tagline": "",
+  "description": "",
+  "colors": [
+    "oklch(0.50 0.10 240)",
+    "oklch(0.95 0.02 240)"
+  ],
+  "tagline_short": "Metall. Präzision. Verlässlichkeit.",
+  "hero_headline": "Metallbau, der <em>trägt</em>",
+  "hero_subline": "H&C Metallbau GmbH steht für präzise Metallverarbeitung und maßgefertigte Konstruktionen — von der Einzelanfertigung bis zur Serienfertigung.",
+  "about_headline": "Handwerk trifft Technik",
+  "services_headline": "Unsere Leistungen",
+  "services_subline": "Von der Konstruktion bis zur Montage — wir decken das gesamte Spektrum der Metallverarbeitung ab.",
+  "portfolio_headline": "Ausgewählte Projekte",
+  "portfolio_subline": "Ein Querschnitt unserer Arbeit — von Einzelteilen bis zu komplexen Stahlkonstruktionen.",
+  "cta_headline": "Bereit für den nächsten Schritt?",
+  "cta_text": "Sie haben ein Projekt oder eine technische Anforderung? Sprechen Sie uns an — wir erarbeiten gemeinsam die passende Lösung.",
+  "cta_button": "Jetzt Kontakt aufnehmen",
+  "meta_description": "H&C Metallbau GmbH — Ihr Spezialist für Stahlbau, CNC-Bearbeitung und Metallkonstruktionen. Präzise Fertigung, zuverlässige Montage.",
+  "branche_label": "Maschinenbau",
+  "branche_key": "maschinenbau",
+  "image_keywords": "steel fabrication workshop, metal construction industrial, precision welding factory"
+}
