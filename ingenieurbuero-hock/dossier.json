@@ -1,0 +1,68 @@
+{
+  "firma": "Ingenieurbüro Hock",
+  "url": "http://www.ibhock.de",
+  "branche": "Tragwerksplanung & Ingenieurwesen",
+  "branche_key": "bau",
+  "branche_label": "Ingenieurbüro",
+  "logo_url": "https://logo.clearbit.com/ibhock.de",
+  "favicon_url": "",
+  "about_text": "Vor über 50 Jahren gegründet, ist das Ingenieurbüro Hock in Rodenbach ein fester Name im Rhein-Main-Gebiet. Gerhard Duseberg und sein Team planen Tragwerke, Industriebauten und Sanierungen mit der Erfahrung aus einem halben Jahrhundert.",
+  "about_headline": "Seit über 50 Jahren tragfähig",
+  "services": [
+    {
+      "title": "Tragwerksplanung",
+      "description": "Statische Berechnungen für Neubauten und Bestandsprüfungen mit Optimierung."
+    },
+    {
+      "title": "Gebäudeplanung & Sanierung",
+      "description": "Industrie- und Gewerbeplanung, Umbauten im Bestand, kostenoptimierte Planung."
+    },
+    {
+      "title": "Brandschutz & Schallschutz",
+      "description": "Brandschutzkonzepte nach Industriebaurichtlinien und baulicher Schallschutznachweis."
+    }
+  ],
+  "team": [
+    {
+      "name": "Gerhard Duseberg",
+      "role": "Inhaber",
+      "photo": ""
+    }
+  ],
+  "verified_stats": [
+    {
+      "number": "50+",
+      "label": "Jahre Erfahrung",
+      "source": "website"
+    }
+  ],
+  "real_images": [
+    "http://www.ibhock.de/fileadmin/user_upload/layout/Hock_Startseite.jpg",
+    "http://www.ibhock.de/fileadmin/_processed_/7/6/csm_Hock_willkommen_eb28785d9a.jpg",
+    "http://www.ibhock.de/fileadmin/_processed_/7/5/csm_Hock_Leistungen_Kachel_7dd1f85435.jpg",
+    "http://www.ibhock.de/fileadmin/_processed_/d/5/csm_Hock_ueber_uns_Kachel_d6b73f7876.jpg",
+    "http://www.ibhock.de/fileadmin/_processed_/2/9/csm_Hock_Leistung01_b1c0ff5b9b.jpg",
+    "http://www.ibhock.de/fileadmin/_processed_/c/3/csm_Hock_Leistungen02_c063b5d1be.jpg"
+  ],
+  "colors": [
+    "oklch(0.55 0.10 70)",
+    "oklch(0.95 0.03 70)"
+  ],
+  "data_sources": [
+    "website"
+  ],
+  "tagline_short": "Ingenieurbüro für Tragwerks- und Industrieplanung",
+  "hero_headline": "Planung mit <em>Substanz</em>",
+  "hero_subline": "Tragwerksplanung, Industriebau und Sanierung im Rhein-Main-Gebiet. Seit über 50 Jahren.",
+  "services_headline": "Unsere Leistungen",
+  "services_subline": "Von der Statik bis zum Brandschutz.",
+  "portfolio_headline": "Projekte",
+  "portfolio_subline": "Referenzen aus Industrie und Gewerbebau.",
+  "cta_headline": "Bauvorhaben geplant?",
+  "cta_text": "Sprechen Sie mit uns über Ihr Projekt.",
+  "cta_button": "Jetzt anfragen",
+  "meta_description": "Ingenieurbüro Hock in Rodenbach - Tragwerksplanung, Gebäudeplanung, Brandschutz und Sanierung im Rhein-Main-Gebiet.",
+  "email": "mail@ibhock.de",
+  "linkedin_data": {},
+  "google_data": {}
+}
