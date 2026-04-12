@@ -1,0 +1,79 @@
+{
+  "firma": "Treiber Metallbau GmbH",
+  "url": "treiber-metallbau.de",
+  "branche": "Metallbau",
+  "branche_key": "handwerk",
+  "branche_label": "Metallbau",
+  "logo_url": "https://logo.clearbit.com/treiber-metallbau.de",
+  "favicon_url": "",
+  "about_text": "Treiber Metallbau ist ein familiengeführter Meisterbetrieb in Glauburg mit über 50 Jahren Erfahrung. 1967 von Schlossermeister Ernst Treiber gegründet, leitet heute Sohn Udo Treiber das 16-köpfige Team in zweiter Generation. Seit 1990 als GmbH organisiert.",
+  "about_headline": "Meisterbetrieb seit 1967",
+  "services": [
+    {
+      "title": "Fassaden & Fenster",
+      "description": "Aluminium- und Stahlfassaden, Fenster, Türen und Wintergärten. Auch Eingangsportale und mobile Zeltfassaden."
+    },
+    {
+      "title": "Balkone & Geländer",
+      "description": "Individuelle Balkon- und Geländerkonstruktionen in Stahl und Aluminium."
+    },
+    {
+      "title": "Brandschutz & Hochwasserschutz",
+      "description": "Zertifizierte Brandschutzlösungen und Hochwasserschutzsysteme für Gewerbe und Privat."
+    }
+  ],
+  "team": [
+    {
+      "name": "Udo Treiber",
+      "role": "Schlossermeister & Geschäftsführer (2. Generation)",
+      "photo": ""
+    }
+  ],
+  "verified_stats": [
+    {
+      "number": "Seit 1967",
+      "label": "Meisterbetrieb",
+      "source": "website"
+    },
+    {
+      "number": "16",
+      "label": "Mitarbeiter",
+      "source": "website"
+    },
+    {
+      "number": "2.",
+      "label": "Generation",
+      "source": "website"
+    }
+  ],
+  "real_images": [
+    "https://site-assets.cdnmns.com/606c02160e78242bde96757ba312f54d/uploads/KvHw8NPM/Fassade-Metallbau-Treiber-4.webp",
+    "https://site-assets.cdnmns.com/606c02160e78242bde96757ba312f54d/uploads/Ts3IQqMd/Balkone-und-Gelaender.webp",
+    "https://site-assets.cdnmns.com/606c02160e78242bde96757ba312f54d/uploads/aZovChq2/Balkone-und-Gelaender-2.webp",
+    "https://site-assets.cdnmns.com/606c02160e78242bde96757ba312f54d/uploads/8ZXFX1p5/Dachelemente-2.webp",
+    "https://site-assets.cdnmns.com/606c02160e78242bde96757ba312f54d/uploads/705EUR3E/Fassaden.webp",
+    "https://site-assets.cdnmns.com/606c02160e78242bde96757ba312f54d/uploads/vX88xKsj/mobile-Zeltfassade-Audi_Lounge.webp",
+    "https://site-assets.cdnmns.com/606c02160e78242bde96757ba312f54d/uploads/SpUzXDby/Schlosserarbeiten.webp"
+  ],
+  "colors": [
+    "oklch(0.58 0.14 55)",
+    "oklch(0.95 0.04 55)"
+  ],
+  "data_sources": [
+    "website"
+  ],
+  "tagline_short": "Metallbau, Fassaden & mehr aus Glauburg",
+  "hero_headline": "Metallbau in zweiter <em>Generation</em>",
+  "hero_subline": "Fassaden, Wintergärten und Brandschutz vom Meisterbetrieb in Glauburg. Über 50 Jahre Erfahrung mit 16 Mitarbeitern.",
+  "services_headline": "Unsere Leistungen",
+  "services_subline": "Von der Fassade bis zum Brandschutz",
+  "portfolio_headline": "Projekte",
+  "portfolio_subline": "Ausgewählte Arbeiten unseres Teams",
+  "cta_headline": "Metallbau-Projekt geplant?",
+  "cta_text": "Udo Treiber und sein Team freuen sich auf Ihre Anfrage.",
+  "cta_button": "Jetzt anfragen",
+  "meta_description": "Treiber Metallbau Glauburg - Fassaden, Wintergärten, Balkone und Brandschutz. Meisterbetrieb seit 1967.",
+  "email": "info@treiber-metallbau.de",
+  "linkedin_data": {},
+  "google_data": {}
+}
