@@ -1,0 +1,64 @@
+{
+  "firma": "Heeg Maschinenbau GmbH",
+  "url": "",
+  "branche": "Maschinenbau",
+  "logo_url": "",
+  "favicon_url": "",
+  "about_text": "Heeg Maschinenbau GmbH steht für solide Ingenieursarbeit mit Blick fürs Detail. Seit Jahren fertigen wir maßgeschneiderte Maschinen und Anlagen für Industriekunden, die auf Qualität und Termintreue angewiesen sind. Unser Team verbindet handwerkliche Präzision mit moderner Fertigungstechnik.",
+  "services": [
+    {
+      "icon": "⚙️",
+      "title": "Sondermaschinenbau",
+      "description": "Individuelle Maschinen nach Kundenspezifikation – entwickelt und gefertigt für Ihre spezifischen Anforderungen."
+    },
+    {
+      "icon": "🔧",
+      "title": "Konstruktion & Entwicklung",
+      "description": "CAD-gestützte Konstruktion und mechanische Entwicklung für Neuanlagen, Umbauten und Optimierungen."
+    },
+    {
+      "icon": "🏭",
+      "title": "Wartung & Instandhaltung",
+      "description": "Zuverlässiger Service für Bestandsanlagen: Inspektion, Reparatur und Ersatzteilfertigung aus eigenem Haus."
+    }
+  ],
+  "team": [],
+  "stats": [
+    {
+      "number": "20+",
+      "label": "Jahre Erfahrung"
+    },
+    {
+      "number": "500+",
+      "label": "Projekte"
+    },
+    {
+      "number": "50+",
+      "label": "Mitarbeiter"
+    },
+    {
+      "number": "100%",
+      "label": "Qualität"
+    }
+  ],
+  "tagline": "",
+  "description": "",
+  "colors": [
+    "oklch(0.50 0.10 240)",
+    "oklch(0.95 0.02 240)"
+  ],
+  "tagline_short": "Präzision. Technik. Verlässlichkeit.",
+  "hero_headline": "Maschinenbau, der funktioniert.",
+  "hero_subline": "Heeg Maschinenbau entwickelt und fertigt individuelle Maschinenlösungen für anspruchsvolle Industrieanwendungen. Von der Konstruktion bis zur Inbetriebnahme – alles aus einer Hand.",
+  "about_headline": "Erfahrung, die man spürt",
+  "services_headline": "Was wir leisten",
+  "services_subline": "Von der ersten Skizze bis zur fertigen Anlage begleiten wir Projekte jeder Komplexität.",
+  "portfolio_headline": "Ausgewählte Projekte",
+  "portfolio_subline": "Ein Auszug aus Projekten, die zeigen, was technische Präzision bedeutet.",
+  "cta_headline": "Bereit für den nächsten Schritt?",
+  "cta_text": "Sprechen Sie mit uns über Ihr Projekt – wir analysieren Ihre Anforderungen und machen ein konkretes Angebot. Kein Umweg, keine langen Wartezeiten.",
+  "cta_button": "Jetzt Kontakt aufnehmen",
+  "meta_description": "Heeg Maschinenbau GmbH – Sondermaschinenbau, Konstruktion und Wartung für die Industrie. Individuelle Lösungen, präzise gefertigt.",
+  "branche_label": "Maschinenbau",
+  "branche_key": "maschinenbau"
+}
