@@ -1,0 +1,62 @@
+{
+  "firma": "MB Lauterbach Metallbau GmbH",
+  "url": "mblauterbach.de",
+  "branche": "Maschinenbau",
+  "logo_url": "",
+  "favicon_url": "",
+  "about_text": "MB Lauterbach Metallbau GmbH steht für solide Handwerksarbeit und technisches Know-how im modernen Metallbau. Mit einem erfahrenen Team aus Fachkräften fertigen wir Konstruktionen, die höchsten Ansprüchen an Qualität und Langlebigkeit gerecht werden. Unsere Stärke liegt in der engen Zusammenarbeit mit unseren Kunden — von der ersten Zeichnung bis zur fertigen Anlage.",
+  "services": [
+    {
+      "title": "Stahlbau & Konstruktion",
+      "description": "Wir planen und fertigen tragende Stahlkonstruktionen für Industrie, Gewerbe und öffentliche Auftraggeber. Jedes Bauteil wird nach geltenden Normen und individuellen Anforderungen produziert."
+    },
+    {
+      "title": "Sonderkonstruktionen",
+      "description": "Standardlösungen stoßen an Grenzen — wir nicht. Wir entwickeln und fertigen maßgeschneiderte Metallkonstruktionen nach Kundenvorgabe, Zeichnung oder gemeinsamem Entwurf."
+    },
+    {
+      "title": "Montage & Service",
+      "description": "Unsere erfahrenen Monteure übernehmen die fachgerechte Montage vor Ort — zuverlässig, sicher und termingenau. Auf Wunsch bieten wir auch Wartung und Instandhaltung bestehender Anlagen."
+    }
+  ],
+  "team": [],
+  "stats": [
+    {
+      "number": "20+",
+      "label": "Jahre Erfahrung"
+    },
+    {
+      "number": "500+",
+      "label": "Projekte realisiert"
+    },
+    {
+      "number": "50+",
+      "label": "Fachkräfte im Team"
+    },
+    {
+      "number": "100%",
+      "label": "Qualitätskontrolle"
+    }
+  ],
+  "tagline": "",
+  "description": "",
+  "colors": [
+    "oklch(0.50 0.10 240)",
+    "oklch(0.95 0.02 240)"
+  ],
+  "tagline_short": "Stahl. Präzision. Verlässlichkeit.",
+  "hero_headline": "Metallbau der <em>Maßstäbe</em> setzt",
+  "hero_subline": "MB Lauterbach Metallbau GmbH realisiert anspruchsvolle Stahlbau- und Metallkonstruktionen — von der Planung bis zur Montage. Präzise gefertigt, termingerecht geliefert.",
+  "about_headline": "Handwerk trifft Ingenieurskunst",
+  "services_headline": "Unsere Leistungen",
+  "services_subline": "Vom Stahlbau über Sonderkonstruktionen bis zur schlüsselfertigen Montage — wir bieten das gesamte Spektrum des modernen Metallbaus.",
+  "portfolio_headline": "Ausgewählte Projekte",
+  "portfolio_subline": "Ein Auszug aus unseren realisierten Konstruktionen — von Industrieanlagen bis zu Sonderbauteilen.",
+  "cta_headline": "Bereit für den nächsten Schritt?",
+  "cta_text": "Sprechen Sie uns an — wir analysieren Ihre Anforderungen und erstellen Ihnen ein individuelles Angebot. Schnell, unkompliziert und verbindlich.",
+  "cta_button": "Jetzt Kontakt aufnehmen",
+  "meta_description": "MB Lauterbach Metallbau GmbH — Ihr Partner für Stahlbau, Sonderkonstruktionen und Montageleistungen. Präzise Fertigung, verlässliche Qualität.",
+  "branche_label": "Metallbau",
+  "branche_key": "maschinenbau",
+  "image_keywords": "steel construction factory metalwork fabrication"
+}
